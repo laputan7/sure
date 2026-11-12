@@ -1,0 +1,29 @@
+---
+ko:
+  settings:
+    llm_usages:
+      show:
+        page_title: "LLM 사용량 및 비용"
+        subtitle: "AI 사용량과 예상 비용을 추적합니다"
+        start_date: "시작일"
+        end_date: "종료일"
+        filter: "필터"
+        total_requests: "총 요청 수"
+        total_tokens: "총 토큰 수"
+        prompt: "프롬프트"
+        completion: "완성"
+        total_cost: "총 비용"
+        avg_cost_per_request: "요청당 평균 비용"
+        based_on_requests: "비용 데이터가 있는 %{total}건 중 %{with_cost}건 기준"
+        cost_by_operation: "작업별 비용"
+        cost_by_model: "모델별 비용"
+        recent_usage: "최근 사용량"
+        col_date: "날짜"
+        col_operation: "작업"
+        col_model: "모델"
+        col_tokens: "토큰"
+        col_cost: "비용"
+        failed: "실패"
+        no_usage_data: "선택한 기간에 사용량 데이터가 없습니다"
+        cost_estimates_title: "비용 추정 안내"
+        cost_estimates_description: "비용은 %{date}에 마지막으로 확인한 공개 제공업체 가격을 기준으로 추정합니다. 실제 비용은 다를 수 있습니다. 가격은 토큰 100만 개당이며 모델마다 다릅니다. 사용자 지정 또는 자체 호스팅 모델은 \"N/A\"로 표시되며 비용 합계에 포함되지 않습니다."

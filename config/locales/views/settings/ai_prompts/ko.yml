@@ -1,0 +1,42 @@
+---
+ko:
+  settings:
+    ai_prompts:
+      prompt_field:
+        provider_label: 제공업체
+        prompt_label: 프롬프트
+        provider_openai: OpenAI
+        provider_anthropic: Anthropic
+        reset: 기본값으로 재설정
+        reset_confirm_title: 기본 프롬프트로 재설정할까요?
+        reset_confirm_body: 사용자 지정 프롬프트를 버리고 기본 제공 지침으로 복원합니다.
+        status_custom: 사용자 지정 프롬프트 사용 중
+        status_default: 기본 제공 프롬프트 사용 중
+        format_risk: '사용자 %{provider} 프롬프트에서 {"%{key}": ...} 예제가 빠졌습니다. 각 요청은 여전히 이 형식을 요구하므로 보통은 파싱이 유지되지만, 다른 출력 형식을 요구하는 재정의는 작동하지 않습니다.'
+      show:
+        page_title: AI 프롬프트
+        disable_ai: AI 어시스턴트 비활성화
+        save: 프롬프트 저장
+        save_confirm:
+          title: "사용자 지정 AI 프롬프트를 저장할까요?"
+          body: "사용자 지정 프롬프트 재정의는 가족의 기본 시스템 지침과 안전 가드레일(예: 금융 조언 제한)을 대체합니다."
+          dont_show_again: "이 경고를 다시 표시하지 않음"
+          cancel: "취소"
+          confirm: "확인"
+        main_system_prompt:
+          title: 기본 시스템 프롬프트
+          subtitle: 모든 채팅 대화에서 AI 어시스턴트의 동작을 정의하는 핵심 지침
+          label: 채팅 시스템 프롬프트
+        transaction_categorizer:
+          title: 거래 분류기
+          subtitle: AI가 정의한 카테고리를 바탕으로 거래를 자동 분류합니다
+        merchant_detector:
+          title: 가맹점 감지기
+          subtitle: AI가 거래 데이터를 식별하고 가맹점 정보로 보강합니다
+        insight_dig_in:
+          title: 인사이트 자세히 보기
+          subtitle: AI로 인사이트를 자세히 살펴볼 때의 첫 채팅 메시지
+          label: 자세히 보기 메시지
+      update:
+        success: AI 프롬프트가 업데이트되었습니다
+        multiple_errors: "프롬프트가 너무 깁니다(최대 %{count}자)"
