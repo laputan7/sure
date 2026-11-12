@@ -1,0 +1,78 @@
+---
+ko:
+  settings:
+    api_keys_controller:
+      success: "API 키를 성공적으로 만들었습니다"
+      revoked_successfully: "API 키의 접근 권한을 해제했습니다"
+      revoke_failed: "API 키의 접근 권한을 해제하지 못했습니다"
+    api_keys:
+      create:
+        success: "API 키를 성공적으로 만들었습니다"
+        creation_failed: "API 키를 만들지 못했습니다. 다시 시도하세요."
+      destroy:
+        revoked_successfully: "API 키의 접근 권한을 해제했습니다"
+        revoke_failed: "API 키의 접근 권한을 해제하지 못했습니다"
+      shared:
+        active: "활성"
+        created_ago: "%{time} 전에 생성"
+        last_used_ago: "%{time} 전에 마지막으로 사용"
+        never_used: "사용한 적 없음"
+        scope_read_only: "읽기 전용"
+        scope_read_write: "읽기/쓰기"
+      index:
+        title: "API 키"
+        subtitle: "데이터에 프로그래밍 방식으로 접근할 API 키를 관리합니다."
+        new_key: "새 API 키"
+        empty_heading: "아직 API 키가 없습니다"
+        empty_description: "데이터에 프로그래밍 방식으로 접근하려면 API 키를 만드세요."
+        revoke_key: "접근 권한 해제"
+        revoke_confirmation: "‘%{name}’의 접근 권한을 해제할까요? 이 키를 사용하는 모든 애플리케이션이 즉시 비활성화됩니다."
+      key_reveal:
+        copied: "복사했습니다!"
+      show:
+        title: "API 키 관리"
+        newly_created:
+          page_title: "API 키를 성공적으로 만들었습니다"
+          heading: "API 키를 성공적으로 만들었습니다!"
+          key_ready: "새 API 키 ‘%{name}’을(를) 만들었으며 사용할 준비가 되었습니다."
+          your_api_key: "내 API 키"
+          copy_store_securely: "이 키를 복사해 안전한 곳에 보관하세요. API 요청을 인증할 때 필요합니다."
+          copy_api_key: "API 키 복사"
+          how_to_use: "API 키 사용 방법"
+          continue: "API 키 설정으로 계속"
+        current_api_key:
+          title: "내 API 키"
+          permissions: "권한"
+          copy_api_key: "API 키 복사"
+          copy_store_securely: "이 키를 복사해 안전한 곳에 보관하세요. API 요청을 인증할 때 필요합니다."
+          usage_instructions_title: "API 키 사용 방법"
+          usage_instructions: "%{product_name} API에 요청을 보낼 때 X-Api-Key 헤더에 API 키를 포함하세요:"
+          back_to_keys: "API 키 목록으로 돌아가기"
+          revoke_key: "키 접근 권한 해제"
+          revoke_confirmation: "이 API 키의 접근 권한을 해제할까요? 이 작업은 되돌릴 수 없으며 이 키를 사용하는 모든 애플리케이션이 즉시 비활성화됩니다."
+      new:
+        title: "API 키 만들기"
+        create_new_api_key: "새 API 키 만들기"
+        subtitle: "Sure 데이터에 프로그래밍 방식으로 접근할 새 API 키를 생성합니다."
+        description: "알아보기 쉬운 이름과 적절한 권한을 설정해 새 API 키를 구성하세요."
+        name_label: "API 키 이름"
+        name_placeholder: "예: 예산 관리 앱, 포트폴리오 추적기"
+        name_help_text: "나중에 이 키를 식별하기 쉽도록 알아보기 쉬운 이름을 지정하세요."
+        name_help: "이 키의 용도를 알아보기 쉬운 이름으로 지정하세요."
+        permissions_label: "권한"
+        permissions_help: "이 API 키에 부여할 권한을 선택하세요:"
+        scope_read_only: "읽기 전용"
+        scope_read_only_description: "계좌, 거래 및 잔액 조회"
+        scope_read_write: "읽기/쓰기"
+        scope_read_write_description: "데이터 조회 및 새 거래 생성"
+        scope_details:
+          read_accounts: "계좌 정보, 잔액 및 계좌별 데이터 조회"
+          read_transactions: "거래 데이터, 분류 및 거래 상세 정보 조회"
+          read_balances: "과거 잔액 데이터 및 계좌 가치 추이 조회"
+          write_transactions: "거래 레코드 생성 및 업데이트(출시 예정)"
+        security_warning_title: "보안 경고"
+        security_warning_body: "API 키는 생성 직후 한 번만 표시됩니다. 반드시 복사해 안전한 곳에 보관하세요. 이 키에 접근할 수 있는 사람은 선택한 권한 범위 내에서 데이터에 접근할 수 있습니다."
+        security_warning: "API 키는 생성 직후 한 번만 표시됩니다. 안전하게 보관하고 공개적으로 공유하지 마세요. 키를 잃어버리면 새 키를 만들어야 합니다."
+        create_key: "API 키 만들기"
+        cancel: "취소"
+        save_api_key: "API 키 저장"
