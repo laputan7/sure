@@ -1,0 +1,12 @@
+ko:
+  models:
+    merchant:
+      no_merchant: 가맹점 없음
+  activerecord:
+    errors:
+      models:
+        family_merchant:
+          attributes:
+            logo:
+              invalid_content_type: JPEG, PNG 또는 WebP 이미지여야 합니다
+              invalid_file_size: 파일 크기는 %{max_megabytes}MB보다 작아야 합니다

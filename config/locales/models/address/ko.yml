@@ -1,0 +1,10 @@
+ko:
+  address:
+    attributes:
+      country: 국가
+      line1: 주소 1
+      line2: 주소 2
+      locality: 지역
+      postal_code: 우편번호
+      region: 주/지역
+    format: "%{line1} %{line2}, %{locality}, %{region} %{postal_code} %{country}"

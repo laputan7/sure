@@ -1,0 +1,44 @@
+ko:
+  account_order:
+    balance_asc:
+      label: 잔액 (낮은순)
+      label_short: 잔액 ↑
+    balance_desc:
+      label: 잔액 (높은순)
+      label_short: 잔액 ↓
+    manual:
+      label: 직접 정렬 (드래그하여 순서 변경)
+      label_short: 직접 정렬
+    name_asc:
+      label: 이름 (가나다순)
+      label_short: 이름 ↑
+    name_desc:
+      label: 이름 (역순)
+      label_short: 이름 ↓
+  activerecord:
+    attributes:
+      account:
+        balance: 잔액
+        currency: 통화
+        family: "%{moniker}"
+        family_id: "%{moniker}"
+        logo: 로고
+        name: 이름
+        subtype: 하위 유형
+    errors:
+      models:
+        account:
+          attributes:
+            logo:
+              invalid_content_type: PNG, JPEG, GIF, WebP 또는 ICO 이미지여야 합니다
+              too_large: "%{max_size}MB보다 작아야 합니다"
+    models:
+      account: 계좌
+      account/credit: 신용카드
+      account/depository: 은행 계좌
+      account/investment: 투자 계좌
+      account/loan: 대출
+      account/other_asset: 기타 자산
+      account/other_liability: 기타 부채
+      account/property: 부동산
+      account/vehicle: 차량

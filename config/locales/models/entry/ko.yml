@@ -1,0 +1,8 @@
+ko:
+  activerecord:
+    errors:
+      models:
+        entry:
+          attributes:
+            base:
+              invalid_sell_quantity: 보유 주식은 %{current_qty}주뿐이므로 %{ticker} 주식 %{sell_qty}주를 매도할 수 없습니다
