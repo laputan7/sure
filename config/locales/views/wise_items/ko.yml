@@ -1,0 +1,170 @@
+---
+ko:
+  wise_items:
+    profile_types:
+      personal: 개인
+      business: 비즈니스
+    entries:
+      default_name: Wise 거래
+      fee_name: Wise 수수료
+      refund_name: Wise 환불
+    activities:
+      jar_deposit: Jar로 이체
+      jar_withdrawal: Jar에서 이체
+      transfer_to_jar: "%{jar}(으)로 이체"
+      transfer_from_jar: "%{jar}에서 이체"
+      interest: Wise 이자
+      asset_fee: Wise 자산 수수료
+      default_name: Wise 활동
+    sync_status:
+      no_accounts: 계좌를 찾을 수 없습니다
+      all_synced:
+        one: "%{count}개 계좌 동기화됨"
+        other: "%{count}개 계좌 동기화됨"
+      partial_setup: "%{synced}개 동기화됨, %{pending}개 설정 필요"
+    create:
+      no_profiles_found: Wise 프로필을 찾을 수 없습니다. API 토큰을 확인하세요.
+      invalid_token: API 토큰이 올바르지 않습니다. 확인 후 다시 시도하세요.
+      connection_failed: Wise에 연결할 수 없습니다. 나중에 다시 시도하세요.
+    destroy:
+      success: Wise 연결이 제거되었습니다
+    update:
+      success: Wise 연결이 업데이트되었습니다
+    sync:
+      success: 동기화가 시작되었습니다
+    syncer:
+      importing_accounts: Wise 계좌를 가져오는 중...
+      checking_account_configuration: 계좌 설정을 확인하는 중...
+      accounts_need_setup:
+        one: "%{count}개 계좌 설정이 필요합니다..."
+        other: "%{count}개 계좌 설정이 필요합니다..."
+      processing_transactions: 거래를 처리하는 중...
+      calculating_balances: 잔액을 계산하는 중...
+      credentials_invalid: Wise API 토큰이 올바르지 않거나 권한이 부족합니다
+      failed: 동기화에 실패했습니다. 다시 시도하거나 지원팀에 문의하세요.
+      import_failed: Wise 가져오기에 실패했습니다.
+      accounts_failed:
+        one: "%{count}개 잔액을 가져오지 못했습니다."
+        other: "%{count}개 잔액을 가져오지 못했습니다."
+      transactions_failed:
+        one: "%{count}개 잔액에서 거래 가져오기 오류가 발생했습니다."
+        other: "%{count}개 잔액에서 거래 가져오기 오류가 발생했습니다."
+      account_processing_failed:
+        one: "%{count}개 Wise 계좌 처리에 실패했습니다."
+        other: "%{count}개 Wise 계좌 처리에 실패했습니다."
+      account_sync_failed:
+        one: "%{count}개 Wise 계좌 동기화를 예약하지 못했습니다."
+        other: "%{count}개 Wise 계좌 동기화를 예약하지 못했습니다."
+      fetch_failed:
+        one: "%{count}개 Wise 요청이 실패했습니다. 다음 동기화에서 다시 시도합니다."
+        other: "%{count}개 Wise 요청이 실패했습니다. 다음 동기화에서 다시 시도합니다."
+    provider_panel:
+      add_connection: Wise 연결 추가
+      token_label: API 토큰
+      token_placeholder: Wise 개인 API 토큰을 붙여넣으세요
+      keep_token_placeholder: 현재 토큰을 유지하려면 비워 두세요
+      connection_name_label: 연결 이름
+      connection_name_placeholder: Wise Personal
+      sync_start_date_label: 거래 가져오기 시작일
+      sync_start_date_help: 이 날짜부터 Wise 명세서를 가져옵니다. 기본값을 유지하면 최대 1년의 내역을 가져옵니다.
+      import_all_history_label: 전체 거래 내역 가져오기
+      import_all_history_help: 최근 1년만 가져오는 대신 Wise 전체 내역(이체, 활동 및 명세서)을 가져옵니다. 이 경우 각 잔액은 Wise에서 개설한 날에 0부터 시작합니다.
+      connect: Wise 연결
+      update_connection: 연결 업데이트
+      setup_accounts: 계좌 설정
+      sync: 동기화
+      disconnect: 연결 해제
+      disconnect_label: "%{name} 연결 해제"
+      disconnect_confirm: "%{name}의 연결을 해제할까요? 동기화된 계좌 데이터가 모두 삭제됩니다."
+      sandbox_note_html: "테스트에는 <strong>sandbox</strong> 기본 URL(<code>https://api.wise-sandbox.com</code>)을 사용하세요. 환경에 <code>WISE_BASE_URL</code>을 설정하세요."
+      encryption_warning:
+        title: 데이터베이스 암호화가 설정되지 않았습니다
+        message: 프로덕션에서 Wise 토큰을 추가하기 전에 Active Record 암호화 키를 설정하세요. 암호화하지 않으면 토큰이 평문으로 저장됩니다.
+      instructions:
+        sign_in_html: "%{link}을(를) 방문해 계정에 로그인하세요"
+        open_tokens: "설정 → 연결 및 앱 관리 → 개발자 도구 → API 토큰으로 이동하세요"
+        create_token: 읽기 전용 권한으로 새 개인 API 토큰을 만드세요
+        copy_token_html: "토큰을 복사해 아래에 붙여넣으세요. Sure는 잔액과 거래를 동기화하는 데만 사용합니다."
+      sca:
+        title: 강력한 고객 인증(SCA)
+        description: Wise에서 입금 내역을 포함한 전체 거래 명세서를 읽으려면 서명된 일회용 토큰 인증이 필요합니다. 여기에서 키 쌍을 생성하고 Wise에 공개 키를 등록해 사용 설정하세요.
+        public_key_label: 공개 키(PEM)
+        registered_help_html: "Wise에 이 키를 등록하세요: 설정 → 연결 및 앱 관리 → 개발자 도구 → 공개 키 → 공개 키 추가."
+        copy: 복사
+        copied: 복사됨!
+        generate: 키 쌍 생성
+        regenerate: 키 쌍 재생성
+        regenerate_confirm: "새 키 쌍을 생성합니다. Wise는 사용자가 Wise 계정에서 직접 제거할 때까지 이전 공개 키도 계속 허용합니다. Sure에서는 원격으로 해지할 수 없습니다. 명세서 동기화를 다시 시작하려면 새 공개 키를 Wise에 등록해야 합니다. 계속할까요?"
+    provider_connection:
+      default_name: Wise
+      default_description: Wise 다중 통화 계좌 연결
+      name: "Wise — %{name}"
+      description: "%{name}(으)로 연결"
+    link_profiles:
+      session_expired: 세션이 만료되었습니다. 다시 연결해 보세요.
+      no_profiles_selected: 프로필을 하나 이상 선택하세요.
+      already_connected: 선택한 프로필이 모두 이미 연결되어 있습니다.
+      success:
+        one: "%{count}개 Wise 프로필을 성공적으로 연결했습니다"
+        other: "%{count}개 Wise 프로필을 성공적으로 연결했습니다"
+    select_profiles:
+      session_expired: 세션이 만료되었습니다. 다시 연결해 보세요.
+      title: Wise 프로필 선택
+      subtitle: 연결할 프로필을 선택하세요
+      description: Wise 계정에 여러 프로필이 있습니다. Sure와 동기화할 프로필을 선택하세요.
+      unnamed_profile: "(이름 없는 프로필)"
+      already_connected_label: 이미 연결됨
+      connect: 선택한 프로필 연결
+      cancel: 취소
+    wise_item:
+      deletion_in_progress: 삭제 진행 중...
+      syncing: 동기화 중...
+      error: 동기화 오류
+      status: "%{timestamp} 전 동기화됨"
+      status_never: 동기화한 적 없음
+      status_with_summary: "마지막 동기화: %{timestamp} 전 — %{summary}"
+      delete: 연결 해제
+      setup_needed: 새 계좌를 설정할 수 있습니다
+      setup_description: "전체 %{total}개 중 %{linked}개 계좌가 연결되었습니다. Wise 통화 잔액별로 Sure 계좌를 만드세요."
+      setup_action: 계좌 설정
+      no_accounts_title: 아직 연결된 계좌가 없습니다
+      no_accounts_description: 동기화를 실행해 Wise 잔액을 찾은 다음 Sure 계좌에 연결하세요.
+    setup_accounts:
+      title: Wise 계좌 설정
+      subtitle: Wise 통화 잔액 연결
+      description: 추적할 Wise 통화 잔액마다 Sure 계좌를 만드세요. 통화별로 계좌가 생성됩니다.
+      no_accounts_to_setup: 모든 계좌가 설정되었습니다
+      all_accounts_linked: Wise 통화 잔액이 모두 Sure 계좌에 연결되었습니다.
+      create_account: 계좌 만들기
+      done: 완료
+    select_accounts:
+      title: Wise 잔액 선택
+      description: "%{product_name} 계좌에 연결할 Wise 통화 잔액을 선택하세요."
+      no_accounts_found: Wise 잔액이 모두 Sure 계좌에 이미 연결되어 있습니다.
+      no_connection: Wise 연결을 찾을 수 없습니다. 먼저 제공업체 설정에서 Wise를 연결하세요.
+      link_account: 잔액 연결
+      cancel: 취소
+    select_existing_account:
+      title: "%{account_name}을(를) Wise에 연결"
+      description: 이 계좌에 연결할 Wise 통화 잔액을 선택하세요. 거래가 자동으로 동기화됩니다.
+      no_accounts_found: 연결되지 않은 Wise 잔액을 찾을 수 없습니다.
+      link_account: 잔액 연결
+      cancel: 취소
+    link_accounts:
+      not_found: Wise 잔액을 찾을 수 없습니다.
+      success: Wise 잔액을 계좌에 성공적으로 연결했습니다.
+      failed: Wise 잔액 연결에 실패했습니다. 다시 시도하세요.
+    link_existing_account:
+      not_found: 계좌 또는 Wise 잔액을 찾을 수 없습니다.
+      account_already_linked: 이 계좌는 이미 제공업체에 연결되어 있습니다.
+      unsupported_account_type: Wise 잔액은 현금 계좌에만 연결할 수 있습니다.
+      currency_mismatch: "이 Wise 잔액의 통화는 %{balance_currency}이고 계좌 통화는 %{account_currency}입니다. 계좌 통화와 같은 잔액을 선택하세요."
+      success: "%{account_name}을(를) Wise에 성공적으로 연결했습니다"
+      failed: 계좌 연결에 실패했습니다. 다시 시도하세요.
+    complete_account_setup:
+      not_found: Wise 잔액을 찾을 수 없습니다.
+      success: 계좌를 만들고 성공적으로 연결했습니다.
+      failed: 계좌 생성에 실패했습니다. 다시 시도하세요.
+    generate_sca_keypair:
+      success: 새 SCA 키 쌍을 생성했습니다. 사용 설정을 마치려면 공개 키를 Wise에 등록하세요.
+      failed: 새 SCA 키 쌍 생성에 실패했습니다. 다시 시도하세요.
