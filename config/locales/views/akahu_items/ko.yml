@@ -1,0 +1,127 @@
+---
+ko:
+  providers:
+    akahu:
+      name: Akahu
+      description: Akahu를 통해 뉴질랜드 은행 계좌 연결
+  family:
+    akahu:
+      create_akahu_item:
+        default_name: Akahu 연결
+  akahu_account:
+    fallback: Akahu 계좌
+  akahu_entry:
+    notes:
+      reference: 참조
+      particulars: 상세 내용
+      code: 코드
+      other_account: 상대 계좌
+  akahu_item:
+    errors:
+      account_processing_failed: Akahu 계좌를 동기화하지 못했습니다
+      account_sync_schedule_failed: Akahu 계좌 동기화를 예약하지 못했습니다
+      pending_transactions_failed: Akahu 대기 중 거래를 가져오지 못했습니다
+      transactions_failed: Akahu 거래를 가져오지 못했습니다
+      sync_failed: Akahu 연결을 동기화하지 못했습니다
+    sync_status:
+      no_accounts: 계좌를 찾을 수 없습니다
+      all_synced:
+        one: 계좌 1개 동기화 완료
+        other: 계좌 %{count}개 동기화 완료
+      partial: "%{linked}개 동기화 완료, %{unlinked}개 설정 필요"
+    institution_summary:
+      none: 연결된 금융기관이 없습니다
+      one: 금융기관 1곳
+      count:
+        one: 금융기관 1곳
+        other: 금융기관 %{count}곳
+  akahu_items:
+    provider_panel:
+      default_connection_name: Akahu 연결
+      add_connection: Akahu 연결 추가
+      update_connection: 연결 업데이트
+      connection_name_label: 연결 이름
+      connection_name_placeholder: 기본 Akahu
+      app_token_label: App Token
+      app_token_placeholder: Akahu 앱 토큰을 붙여 넣으세요
+      keep_app_token_placeholder: 기존 앱 토큰을 유지하려면 비워 두세요
+      user_token_label: User Token
+      user_token_placeholder: Akahu 사용자 토큰을 붙여 넣으세요
+      keep_user_token_placeholder: 기존 사용자 토큰을 유지하려면 비워 두세요
+      setup_accounts: 계좌 설정
+      syncing: 동기화 중...
+      sync: 동기화
+      disconnect: 연결 해제
+      disconnect_confirm: "%{name} 연결을 해제하시겠습니까?"
+    create:
+      success: Akahu 연결을 저장했습니다.
+    update:
+      success: Akahu 연결을 업데이트했습니다.
+    destroy:
+      success: Akahu 연결 삭제를 예약했습니다.
+      unlink_failed: Akahu 연결을 해제하지 못했습니다
+    select_accounts:
+      title: Akahu 계좌 연결
+      description: 추가할 Akahu 계좌를 선택하세요.
+      no_accounts_found: 연결되지 않은 Akahu 계좌가 없습니다.
+      no_credentials_configured: 먼저 제공자 설정에서 Akahu를 구성하세요.
+      cancel: 취소
+      link_accounts: 계좌 연결
+    link_accounts:
+      success:
+        one: Akahu 계좌 1개를 연결했습니다.
+        other: Akahu 계좌 %{count}개를 연결했습니다.
+      no_accounts_selected: 계좌를 하나 이상 선택하세요.
+      no_credentials_configured: 먼저 제공자 설정에서 Akahu를 구성하세요.
+      unsupported_account_type: Akahu에서 지원하지 않는 계좌 유형입니다.
+      link_failed: 연결된 계좌가 없습니다.
+    select_existing_account:
+      title: "Akahu 계좌를 %{account_name}에 연결"
+      description: 이 계좌에 연결할 Akahu 계좌를 선택하세요.
+      no_accounts_found: 연결되지 않은 Akahu 계좌가 없습니다.
+      no_credentials_configured: 먼저 제공자 설정에서 Akahu를 구성하세요.
+      account_already_linked: 이 계좌는 이미 제공자에 연결되어 있습니다.
+      cancel: 취소
+      link_account: 계좌 연결
+    link_existing_account:
+      success: "Akahu 계좌를 %{account_name}에 연결했습니다."
+      account_already_linked: 이 계좌는 이미 제공자에 연결되어 있습니다.
+      akahu_account_already_linked: 이 Akahu 계좌는 이미 연결되어 있습니다.
+    setup_accounts:
+      title: Akahu 계좌 설정
+      subtitle: 각 Akahu 계좌를 Sure에 표시할 방법을 선택하세요.
+      no_credentials: 먼저 Akahu 인증 정보를 구성하세요.
+      api_error: Akahu 계좌를 가져오지 못했습니다.
+      fetch_failed: 계좌를 가져오지 못했습니다
+      no_accounts_to_setup: 설정할 계좌가 없습니다
+      all_accounts_linked: 모든 Akahu 계좌가 이미 연결되어 있습니다.
+      choose_account_type: 계좌 유형 선택
+      choose_account_type_description: 추적하지 않을 계좌는 건너뛰세요.
+      account_type_label: 계좌 유형
+      account_types:
+        skip: 건너뛰기
+        depository: 현금
+        credit_card: 신용카드
+        investment: 투자
+        loan: 대출
+      create_accounts: 계좌 만들기
+      cancel: 취소
+    complete_account_setup:
+      success:
+        one: Akahu 계좌 1개를 만들었습니다.
+        other: Akahu 계좌 %{count}개를 만들었습니다.
+      all_skipped: 생성된 Akahu 계좌가 없습니다.
+      no_accounts: 선택한 Akahu 계좌가 없습니다.
+      creation_failed: Akahu 계좌를 만들지 못했습니다.
+    akahu_item:
+      deletion_in_progress: 삭제 중
+      syncing: 동기화 중
+      error: 오류
+      status_with_summary: "%{timestamp} 전 동기화 · %{summary}"
+      status_never: 동기화한 적 없음
+      delete: 삭제
+      setup_needed: 계좌 설정 필요
+      setup_description: 계좌 %{total}개 중 %{linked}개 연결됨.
+      setup_action: 계좌 설정
+      no_accounts_title: 아직 가져온 계좌가 없습니다
+      no_accounts_description: Akahu 계좌를 가져온 다음 연결할 계좌를 선택하세요.
