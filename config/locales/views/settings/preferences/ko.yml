@@ -1,0 +1,68 @@
+---
+ko:
+  settings:
+    preferences:
+      show:
+        country: 국가
+        currency: 통화
+        date_format: 날짜 형식
+        general_subtitle: 환경설정을 구성합니다
+        general_title: 일반
+        transactions_title: 거래
+        transactions_subtitle: 거래 동작 방식을 설정합니다
+        manual_reconciliation: 수동 대조
+        manual_reconciliation_hint: 직접 입력한 계좌에 대조 컨트롤을 표시합니다. 은행 동기화를 사용하는 계좌에서는 명세서 대조를 사용합니다.
+        default_period: 기본 기간
+        default_account_order: 기본 계좌 순서
+        default_account_order_hint: 수동을 선택하면 사이드바에서 계좌를 드래그해 순서를 정할 수 있습니다.
+        language: 언어
+        language_auto: 브라우저 언어
+        page_title: 환경설정
+        timezone: 시간대
+        translations_notice: 여러 언어의 번역을 계속 작업하고 있습니다.
+        rule_suggestions: 규칙 제안
+        rule_suggestions_hint: 거래 카테고리를 변경한 뒤 규칙을 만들도록 제안합니다
+        budget_title: 예산
+        budget_subtitle: 예산 동작 방식을 설정합니다
+        month_start_day: 예산 월 시작일
+        month_start_day_hint: "예산 월이 시작되는 날을 설정합니다(예: 급여일)"
+        month_start_day_warning: 예산 및 월초부터 현재까지(MTD) 계산에 매월 1일 대신 이 사용자 지정 시작일이 적용됩니다.
+        investment_contributions_as_spending: 투자 금액을 지출로 계산
+        investment_contributions_as_spending_hint: 투자 계좌로 이동한 금액을 예산, 보고서, 현금 흐름 차트에서 지출로 계산합니다. 끄면 투자액으로 표시됩니다.
+        personal_budgets: 개인 예산
+        personal_budgets_hint: 가족 구성원별 개인 예산을 사용합니다.
+        household_budget_enabled: 가구 예산
+        household_budget_enabled_hint: 개인 예산과 함께 공유 가구 예산을 유지합니다. 끄면 개인 예산만 사용합니다.
+        budget_sharing_title: 예산 공유
+        budget_sharing_subtitle: 다른 구성원이 내 개인 예산을 보거나 수정하도록 허용합니다
+        budget_sharing_no_members: 공유할 %{moniker}의 다른 구성원이 없습니다
+        budget_sharing_permission_label: "%{name}님의 액세스 권한"
+        budget_sharing_permissions:
+          none: 액세스 권한 없음
+          read_only: 보기만 가능
+          read_write: 수정 가능
+        currencies_title: "%{moniker} 통화"
+        currencies_subtitle: "%{moniker}의 금액 입력란에 표시할 통화를 선택합니다"
+        base_currency_label: 기준 통화
+        base_currency_badge: 기준 통화
+        additional_currencies_label: 추가 통화
+        no_additional_currencies: 선택된 항목 없음
+        currencies_more: "+%{count}개 더 보기"
+        manage_currencies: 통화 관리
+        manage_currencies_subtitle: 사용하지 않는 통화는 선택 해제하거나 몇 가지 통화만 남기세요.
+        select_all_currencies: 모두 선택
+        select_base_only: 기준 통화만
+        currency_search_placeholder: 통화 검색
+        no_matching_currencies: 통화를 찾을 수 없습니다
+        selected_currencies_count:
+          one: "%{count}개 선택됨"
+          other: "%{count}개 선택됨"
+        save_currencies: 통화 저장
+        sharing_title: "%{moniker} 공유"
+        sharing_subtitle: "%{moniker}에서 계좌를 공유하는 방식을 설정합니다"
+        sharing_default_label: 새 계좌의 기본 공유 설정
+        sharing_shared: 모든 구성원과 공유
+        sharing_private: 기본적으로 비공개
+        preview:
+          title: 미리보기 기능 사용
+          description: preview 또는 canary 태그가 붙은 개발 중 기능을 사용합니다.
