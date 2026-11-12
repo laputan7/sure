@@ -1,0 +1,80 @@
+---
+ko:
+  valuations:
+    names:
+      current_account_value: 현재 계좌 가치
+      current_balance: 현재 잔액
+      current_loan_balance: 현재 대출 잔액
+      current_market_value: 현재 시장 가치
+      manual_balance_update: 잔액 직접 조정
+      manual_principal_update: 원금 직접 조정
+      manual_value_update: 가치 직접 조정
+      opening_account_value: 계좌 개설 시 가치
+      opening_balance: 최초 잔액
+      original_principal: 최초 원금
+      original_purchase_price: 최초 매입 가격
+    confirmation_contents:
+      this_will: '계좌 가치를 %{action_verb}합니다:'
+      to_colon: '변경 후:'
+      total_account_value: 총 계좌 가치
+      holdings_value: 보유 자산 가치
+      brokerage_cash: 증권사 예수금
+      account_balance: 계좌 잔액
+      credit_card_balance: 신용카드 잔액
+      loan_balance: 대출 잔액
+      property_value: 부동산 가치
+      vehicle_value: 차량 가치
+      crypto_balance: 암호화폐 잔액
+      asset_value: 자산 가치
+      liability_balance: 부채 잔액
+      balance: 잔액
+      "on": '날짜:'
+      to: 변경 후
+      recalculate_notice: '이 변경 또는 업데이트(%{change_or_update})를 기준으로 모든 미래 거래와 잔액을 다시 계산합니다.'
+      change: 변경
+      update: 업데이트
+      action_set: 설정
+      action_update: 업데이트
+    create:
+      account_updated: 계좌를 업데이트했습니다
+    update:
+      account_updated: 계좌를 업데이트했습니다
+      entry_updated: 항목을 업데이트했습니다
+    errors:
+      amount_required: 금액을 입력해야 합니다
+    form:
+      amount: 금액
+      submit: 잔액 업데이트 추가
+    header:
+      balance: 잔액
+    index:
+      change: 변경
+      date: 날짜
+      new_entry: 새 항목
+      no_valuations: 아직 이 계좌의 가치 기록이 없습니다
+      valuations: 가치
+      value: 가치
+    new:
+      title: 새 잔액
+    show:
+      amount: 금액
+      amount_label: 날짜 기준 계좌 가치
+      date_label: 날짜
+      delete: 삭제
+      delete_subtitle: 이 작업은 되돌릴 수 없습니다
+      delete_title: 항목 삭제
+      details: 세부 정보
+      name_label: 이름
+      name_placeholder: 이 항목의 이름 입력
+      note_label: 메모
+      note_placeholder: 항목에 대한 추가 세부 정보 입력
+      overview: 개요
+      settings: 설정
+      opening_balance: 최초 잔액
+      update_value: 가치 업데이트
+    confirm_create:
+      confirm: 확인
+      title: 새 잔액 확인
+    confirm_update:
+      title: 잔액 업데이트
+      update: 업데이트
