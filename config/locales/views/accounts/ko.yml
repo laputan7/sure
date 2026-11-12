@@ -1,0 +1,259 @@
+---
+ko:
+  account:
+    entries:
+      destroy:
+        success: "항목이 삭제되었습니다."
+  accounts:
+    reconciliation_indicator:
+      matched: 모든 거래가 조정되었습니다
+      needs_attention: 거래 조정이 필요합니다
+    not_authorized: "이 계좌를 관리할 권한이 없습니다"
+    scheduled_balance_tooltip:
+      description: 예정된 모든 거래가 반영된 후의 잔액
+      current: 현재 잔액
+      scheduled: 예정 잔액
+      projected: 예상 잔액
+    account:
+      complete_setup: 설정 완료
+      edit: 수정
+      link_lunchflow: Lunch Flow 연결
+      link_provider: 제공업체 연결
+      unlink_provider: 제공업체 연결 해제
+      change_simplefin_account: SimpleFIN 계좌 변경
+      troubleshoot: 문제 해결
+      enable: 계좌 활성화
+      disable: 계좌 비활성화
+      exclude_from_reports: 모든 보고서에서 제외
+      include_in_reports: 보고서에 포함
+      excluded_from_reports_indicator: 보고서에서 제외됨
+      set_default: 기본값으로 설정
+      remove_default: 기본값 해제
+      default_label: 기본값
+      delete: 계좌 삭제
+      sharing: 공유
+    chart:
+      data_not_available: 선택한 기간에는 데이터를 사용할 수 없습니다
+    create:
+      success: "%{type} 계좌가 생성되었습니다"
+    logo_caption:
+      appstore: App Store 제공
+      brandfetch: Brandfetch 제공
+      duckduckgo: DuckDuckGo 제공
+      google: Google 제공
+      googleplay: Google Play 제공
+      none: 아직 아이콘이 없습니다
+      rustore: RuStore 제공
+      uploaded: 직접 업로드함
+      yandex: Yandex 제공
+    logo_field:
+      current: 현재
+      domain_needed: 아이콘을 선택하려면 tbank.ru와 같은 기관 도메인을 입력하세요.
+      empty: 이 도메인에서 아이콘을 찾을 수 없습니다. 아래에서 직접 업로드하세요.
+      pick: 아이콘 선택
+      pending: 저장하면 적용됩니다
+      remove: 제거
+      removal: 저장하면 제거되고 자동 아이콘이 다시 표시됩니다
+      searching: 검색 중…
+    logo_options:
+      size: "%{size} px"
+      sources:
+        appstore: App Store
+        brandfetch: Brandfetch
+        duckduckgo: DuckDuckGo
+        google: Google
+        googleplay: Google Play
+        rustore: RuStore
+        yandex: Yandex
+      stored: 저장된 아이콘
+    set_default:
+      depository_only: "현금 계좌와 신용카드 계좌만 기본값으로 설정할 수 있습니다."
+    destroy:
+      success: "%{type} 계좌가 삭제 예약되었습니다"
+      cannot_delete_linked: "연결된 계좌는 삭제할 수 없습니다. 먼저 연결을 해제하세요."
+      failed: "리소스를 삭제하지 못했습니다. 나중에 다시 시도하세요."
+    empty:
+      empty_message: 연결, 가져오기 또는 직접 입력을 통해 계좌를 추가하세요.
+      new_account: 새 계좌
+      no_accounts: 아직 계좌가 없습니다
+    form:
+      balance: "기준일 잔액:"
+      opening_balance_date_label: 최초 잔액 기준일
+      name_label: 계좌 이름
+      name_placeholder: 계좌 이름 예시
+      additional_details: 추가 정보
+      institution_name_label: 금융기관 이름
+      institution_name_placeholder: "예: Chase Bank"
+      institution_domain_label: 금융기관 도메인
+      institution_domain_placeholder: "예: chase.com"
+      institution_domain_hint: 금융기관 아이콘을 찾는 데 사용됩니다.
+      institution_domain_missing_logo_key_hint: 금융기관 아이콘을 찾는 데 사용됩니다. Brandfetch 클라이언트 ID가 설정되지 않아 Brandfetch 로고를 사용할 수 없습니다.
+      institution_domain_settings_link: 셀프 호스팅 설정에서 추가
+      logo_label: 아이콘
+      logo_hint: 또는 최대 1MB의 PNG, JPEG, GIF, WebP 또는 ICO 이미지를 직접 업로드하세요. 업로드한 이미지는 Brandfetch 로고를 대체합니다.
+      notes_label: 메모
+      notes_placeholder: 계좌 번호, 지점 코드, IBAN, 라우팅 번호 등의 추가 정보를 기록하세요.
+      exclude_from_reports: 모든 보고서에서 제외
+      enable_category_matcher_label: 카테고리 매칭 사용
+      enable_category_matcher_hint: 사용 설정하면 제공업체가 제안한 카테고리가 가져온 거래에 적용됩니다. 사용 중지하면 새 거래에 카테고리를 지정하지 않습니다.
+    index:
+      accounts: 계좌
+      financekit_accounts:
+        title: Apple Wallet
+        description: Sure iOS 앱에서 Apple Wallet 연결을 관리하고 동기화합니다.
+      cancel_sync: 동기화 취소
+      manual_accounts:
+        other_accounts: 기타 계좌
+      new_account: 새 계좌
+      sync: 모두 동기화
+    sync_all:
+      syncing: "계좌 동기화 중..."
+    new:
+      import_accounts: 계좌 가져오기
+      container:
+        select: 선택
+        navigate: 이동
+        close: 닫기
+        next: 다음
+        previous: 이전
+      method_selector:
+        connected_entry: 계좌 연결
+        connected_entry_eu: EU 계좌 연결
+        link_with_provider: "%{provider}에 연결"
+        lunchflow_entry: Lunch Flow 계좌 연결
+        manual_entry: 계좌 잔액 입력
+        title: 어떤 방법으로 추가하시겠어요?
+      title: 무엇을 추가하시겠어요?
+    show:
+      limited_fx_history_warning: "%{date}부터 환율 내역을 확인할 수 있습니다. 이 날짜 이전의 거래에는 대략적인 환율 환산이 적용됩니다. 환율 제공업체가 제한된 기간의 과거 데이터만 제공하는 경우 이런 일이 발생할 수 있습니다."
+      tabs:
+        activity: 활동
+        extra_repayments: 추가 상환
+        holdings: 보유 종목
+        overview: 개요
+        schedule: 예정 내역
+        statements: 명세서
+      activity:
+        amount: 금액
+        balance: 잔액
+        date: 날짜
+        entries: 항목
+        entry: 항목
+        filter: 필터
+        new: 새로 만들기
+        new_activity: 새 활동
+        new_balance: 새 잔액
+        new_trade: 새 매매
+        new_transaction: 새 거래
+        new_transfer: 새 이체
+        no_entries: 항목을 찾을 수 없습니다
+        search:
+          placeholder: 이름으로 항목 검색
+        search_placeholder: 이름으로 항목 검색
+        title: 활동
+      chart:
+        balance: 잔액
+        owed: 부채 금액
+      header:
+        complete_setup: 설정 완료
+      menu:
+        confirm_accept: "%{name} 삭제"
+        confirm_body_html: "<p>이 계좌를 삭제하면 계좌 가치 내역이 지워져 전체 계좌의 여러 측면에 영향을 줍니다. 이 작업은 순자산 계산과 계좌 그래프에 직접적인 영향을 미칩니다.</p><br /> <p>삭제 후에는 새 계좌로 다시 추가해야 하므로 계좌 정보를 복구할 수 없습니다.</p>"
+        confirm_title: 계좌를 삭제하시겠어요?
+        delete_account: 계좌 삭제
+        edit: 수정
+        import: 거래 가져오기
+        import_trades: 매매 내역 가져오기
+        import_transactions: 거래 가져오기
+        manage: 계좌 관리
+        sharing: 공유
+        statements: 명세서
+        exclude_from_reports: 모든 보고서에서 제외
+        include_in_reports: 보고서에 포함
+    update:
+      success: "%{type} 계좌가 업데이트되었습니다"
+      logo_not_applied: 계좌는 저장되었지만 선택한 아이콘을 다운로드하지 못했습니다. 다시 시도하거나 직접 업로드하세요.
+    sidebar:
+      missing_data: 과거 데이터 누락
+      missing_data_description: "%{product}은(는) 과거 환율, 증권 가격 등의 데이터를 가져오기 위해 타사 제공업체를 사용합니다. 과거 계좌 잔액을 정확하게 계산하려면 이 데이터가 필요합니다."
+      configure_providers: 여기에서 제공업체를 설정하세요.
+      tabs:
+        all: 전체
+        assets: 자산
+        debts: 부채
+      new_asset: 새 자산
+      new_debt: 새 부채
+      new_account: 새 계좌
+      new_account_group: "새 %{account_group}"
+      expand_all: 모두 펼치기
+      collapse_all: 모두 접기
+      reorder_account: "%{account} 이동"
+      reorder_hint: 끌어서 순서를 변경하세요. 키보드에서는 Enter 키를 누른 다음 화살표 키를 누르세요.
+      sort_mode:
+        start: 계좌 정렬
+        hint: 손잡이를 끌어 계좌 순서를 변경하세요.
+        done: 완료
+    types:
+      depository: 현금
+      investment: 투자
+      crypto: 암호화폐
+      property: 부동산
+      vehicle: 차량
+      other_asset: 기타 자산
+      credit_card: 신용카드
+      loan: 대출
+      other_liability: 기타 부채
+    types_plural:
+      depository: 현금
+      investment: 투자
+      crypto: 암호화폐
+      property: 부동산
+      vehicle: 차량
+      other_asset: 기타 자산
+      credit_card: 신용카드
+      loan: 대출
+      other_liability: 기타 부채
+    tax_treatments:
+      taxable: 과세 대상
+      tax_deferred: 과세 이연
+      tax_exempt: 비과세
+      tax_advantaged: 세제 혜택 적용
+    tax_treatment_descriptions:
+      taxable: 실현 시 수익에 과세
+      tax_deferred: 납입금 공제, 인출 시 과세
+      tax_exempt: 세후 납입, 수익 비과세
+      tax_advantaged: 조건에 따라 특별한 세제 혜택
+    subtype_regions:
+      us: 미국
+      uk: 영국
+      ca: 캐나다
+      au: 호주
+      eu: 유럽
+      in: 인도
+      generic: 일반
+    confirm_unlink:
+      title: 제공업체에서 계좌 연결을 해제하시겠어요?
+      description_html: "<strong>%{account_name}</strong> 계좌를 <strong>%{provider_name}</strong>에서 연결 해제하려고 합니다. 이 계좌는 수동 계좌로 전환됩니다."
+      warning_title: 연결 해제 시 변경 사항
+      warning_wallet_connection: 이 Apple Wallet 연결에 포함된 모든 계좌의 연결이 해제됩니다. 거래와 잔액은 유지됩니다. 새 Wallet 설정으로 Sure iOS 앱에서 다시 연결할 수 있습니다.
+      warning_no_sync: 계좌가 더 이상 제공업체와 자동으로 동기화되지 않습니다
+      warning_manual_updates: 거래를 추가하고 잔액을 직접 업데이트해야 합니다
+      warning_transactions_kept: 기존 거래와 잔액은 모두 유지됩니다
+      warning_can_delete: 연결 해제 후 필요하면 계좌를 삭제할 수 있습니다
+      confirm_button: 확인 후 연결 해제
+    unlink:
+      success: "계좌 연결이 해제되었습니다. 이제 수동 계좌입니다."
+      not_linked: "계좌가 제공업체에 연결되어 있지 않습니다"
+      error: "계좌 연결 해제 실패: %{error}"
+      generic_error: "예기치 않은 오류가 발생했습니다. 다시 시도하세요."
+    select_provider:
+      title: 연결할 제공업체 선택
+      description: "%{account_name} 계좌를 연결할 제공업체를 선택하세요"
+      already_linked: "계좌가 이미 제공업체에 연결되어 있습니다"
+      no_providers: "현재 설정된 제공업체가 없습니다"
+
+  email_confirmations:
+    new:
+      invalid_token: 확인 링크가 유효하지 않거나 만료되었습니다.
+      success_login: 이메일이 확인되었습니다. 새 이메일 주소로 로그인하세요
+        address.

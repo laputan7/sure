@@ -1,0 +1,93 @@
+---
+ko:
+  family_merchants:
+    create:
+      error: '가맹점을 생성하는 중 오류가 발생했습니다: %{error}'
+      success: 새 가맹점을 생성했습니다.
+    destroy:
+      success: 가맹점을 삭제했습니다.
+      unlinked_success: 가맹점을 거래에서 연결 해제했습니다.
+    edit:
+      title: 가맹점 수정
+    form:
+      name_placeholder: 가맹점 이름
+      website_placeholder: "웹사이트(예: starbucks.com)"
+      website_hint: 로고를 자동으로 표시하려면 가맹점 웹사이트를 입력하세요.
+      logo_label: 로고
+      logo_hint: 웹사이트 로고 대신 표시됩니다. JPEG, PNG 또는 WebP 형식, 최대 %{max_megabytes}MB.
+      remove_logo_label: 업로드한 로고 삭제
+    index:
+      empty: 아직 가맹점이 없습니다.
+      new: 새 가맹점
+      import: 가맹점 가져오기
+      merge: 가맹점 병합
+      title: 가맹점
+      family_title: "%{moniker} 가맹점"
+      family_empty: "아직 %{moniker} 가맹점이 없습니다."
+      provider_title: 연동 가맹점
+      provider_empty: "아직 이 %{moniker}에 연결된 연동 가맹점이 없습니다."
+      provider_read_only: 연동 가맹점은 연결된 금융기관에서 동기화됩니다. 여기서는 수정할 수 없습니다.
+      provider_info: 은행 연결이나 AI가 자동으로 찾은 가맹점입니다. 수정해 나만의 가맹점으로 복사하거나, 삭제해 거래와의 연결을 해제할 수 있습니다.
+      enhance_info:
+        one: "%{count}개의 연동 가맹점에 웹사이트 정보가 없습니다. AI로 웹사이트를 찾고, 로고를 표시하고, 중복 가맹점을 병합하세요."
+        other: "%{count}개의 연동 가맹점에 웹사이트 정보가 없습니다. AI로 웹사이트를 찾고, 로고를 표시하고, 중복 가맹점을 병합하세요."
+      enhance_button: AI로 정보 보완
+      search_family_merchants: 내 가맹점 검색...
+      search_provider_merchants: 연동 가맹점 검색...
+      no_family_merchants_found: 일치하는 내 가맹점이 없습니다.
+      no_provider_merchants_found: 일치하는 연동 가맹점이 없습니다.
+      per_page: 페이지당
+      unlinked_title: 최근 연결 해제됨
+      unlinked_info: 최근 거래에서 연결 해제한 가맹점입니다. 거래에 다시 연결하지 않으면 30일 후 목록에서 사라집니다.
+      table:
+        merchant: 가맹점
+        actions: 작업
+        source: 출처
+    family_merchant:
+      edit: 수정
+      delete: 삭제
+    merchant:
+      confirm_accept: 가맹점 삭제
+      confirm_body: 이 가맹점을 삭제할까요? 삭제하면 연결된 모든 거래에서 가맹점 연결이 해제되어 보고서에 영향을 줄 수 있습니다.
+      confirm_title: 가맹점을 삭제할까요?
+      delete: 가맹점 삭제
+      edit: 가맹점 수정
+    merge:
+      title: 가맹점 병합
+      description: 대표 가맹점을 선택한 다음 여기에 병합할 가맹점을 선택하세요. 병합된 가맹점의 모든 거래는 대표 가맹점에 연결됩니다.
+      target_label: 병합 대상
+      select_target: 대표 가맹점 선택...
+      sources_label: 병합할 가맹점
+      sources_search_placeholder: 가맹점 검색...
+      no_merchants_found: 일치하는 가맹점이 없습니다.
+      sources_hint: 선택한 가맹점은 대표 가맹점으로 병합됩니다. 내 가맹점은 삭제되고 연동 가맹점은 연결 해제됩니다.
+      submit: 선택한 가맹점 병합
+    new:
+      title: 새 가맹점
+    perform_merge:
+      success:
+        one: 가맹점 %{count}개를 병합했습니다.
+        other: 가맹점 %{count}개를 병합했습니다.
+      no_merchants_selected: 병합할 가맹점을 선택하지 않았습니다.
+      target_not_found: 대표 가맹점을 찾을 수 없습니다.
+      invalid_merchants: 유효하지 않은 가맹점을 선택했습니다.
+    provider_merchant:
+      edit: 수정
+      remove: 제거
+      remove_confirm_title: 가맹점 연결을 해제할까요?
+      remove_confirm_body: "%{name}을(를) 제거할까요? 이 가맹점과 연결된 모든 거래에서 연결이 해제되지만, 가맹점 자체는 삭제되지 않습니다."
+    enhance:
+      success: 연동 가맹점 정보 보완을 시작했습니다. 곧 가맹점 정보가 보완되고 중복 항목이 병합됩니다.
+      already_running: 정보 보완이 이미 진행 중입니다. 완료될 때까지 기다려 주세요.
+    update:
+      success: 가맹점을 업데이트했습니다.
+      converted_success: 가맹점을 변환하고 업데이트했습니다.
+  merchants:
+    show:
+      average_transaction: 평균 거래액
+      edit: 가맹점 수정
+      first_transaction: 첫 거래
+      last_transaction: 최근 거래
+      summary: 요약
+      total_spending: 총 지출액
+      total_transactions: 총 거래 수

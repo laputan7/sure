@@ -1,0 +1,75 @@
+---
+ko:
+  trades:
+    api_errors:
+      activity_label_must_match_type: "유형이 %{type}이면 investment_activity_label은 %{label}이어야 합니다."
+      invalid_activity_label: 유효하지 않은 투자 활동 라벨입니다.
+      invalid_type: 유효하지 않은 유형입니다.
+      supported_types: "type은 다음 중 하나여야 합니다: %{types}"
+    form:
+      account: 이체 계좌(선택 사항)
+      account_prompt: 계좌 검색
+      amount: 금액
+      fee: 거래 수수료
+      holding: 종목 코드
+      holding_optional: 종목 코드(선택 사항)
+      price: 주당 가격
+      qty: 수량
+      submit: 거래 추가
+      ticker_placeholder: AAPL
+      type: 유형
+      type_buy: 매수
+      type_sell: 매도
+      type_deposit: 입금
+      type_withdrawal: 출금
+      type_dividend: 배당
+      type_interest: 이자
+      dividend_requires_security: 배당에는 투자 종목이 필요합니다.
+      trade_requires_security: 매수·매도 거래에는 종목 코드가 필요합니다.
+    trade:
+      scheduled: 예정됨
+      scheduled_tooltip: 미래 날짜로 설정되어 있으며, 해당 날짜가 되기 전까지 잔액에 반영되지 않습니다.
+    header:
+      buy: 매수
+      sell: 매도
+      dividend: 배당
+      interest: 이자
+      contribution: 납입
+      exchange: 환전
+      fee: 수수료
+      other: 기타
+      reinvestment: 재투자
+      sweep_in: 현금 스윕 입금
+      sweep_out: 현금 스윕 출금
+      transfer: 이체
+      withdrawal: 출금
+      current_market_price_label: 현재 시장 가격
+      overview: 개요
+      purchase_price_label: 매입 가격
+      purchase_qty_label: 매입 수량
+      symbol_label: 종목 코드
+      total_return_label: 미실현 손익
+    new:
+      title: 새 거래
+    show:
+      additional: 추가 정보
+      amount_label: 금액
+      buy: 매수
+      category_label: 카테고리
+      cost_per_share_label: 주당 매입가
+      date_label: 날짜
+      delete: 삭제
+      fee_label: 거래 수수료
+      delete_subtitle: 이 작업은 취소할 수 없습니다.
+      delete_title: 거래 삭제
+      details: 상세 정보
+      provider_disabled_warning: "%{provider} 제공업체가 비활성화되어 가격 업데이트가 일시 중지되었습니다. 설정에서 다시 활성화하거나 보유 종목을 다른 제공업체에 연결하세요."
+      exclude_subtitle: 이 거래는 보고서와 계산에 포함되지 않습니다.
+      exclude_title: 분석에서 제외
+      no_category: 카테고리 없음
+      note_label: 메모
+      note_placeholder: 추가 메모를 입력하세요...
+      quantity_label: 수량
+      sell: 매도
+      settings: 설정
+      type_label: 유형

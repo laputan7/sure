@@ -1,0 +1,53 @@
+---
+ko:
+  recurring_occurrences:
+    history_status:
+      paid: 결제됨
+      skipped: 건너뛰었습니다.
+      missed: 놓친
+      scheduled: 예정됨
+    show:
+      due_on: "기한 %{date}"
+      paid_of: "%{expected} 중 %{paid}가 지급됨"
+      paid_headline: "%{amount} 지급됨"
+      remaining: "%{amount} 남음"
+      settled: 전액 결제됨
+      overpaid: 예상보다 더
+      skipped: 건너뛰었습니다.
+      missed: 부재중으로 표시됨
+      payments: 결제
+      manual_payment: 수동결제
+      unlink: 풀리다
+      review_heading: 결제 검토
+      find_heading: 결제 찾기
+      add_heading: 다른 결제 추가
+      other_matches: 기타 가능성 있는 일치 항목
+      no_ranked_candidates: 아직 이 청구서에 대한 결제 내역이 없습니다.
+      search_all: 모든 거래 검색
+      search_placeholder: 거래 검색
+      no_candidates: 연결할 주변 거래가 없습니다.
+      no_search_results: "%{query}와 일치하는 항목이 없습니다."
+      link_payment: 링크결제
+      not_this_one: 이건 아니야
+      cant_find: 거래를 찾을 수 없나요?
+      manual_explainer: 여기에 일치하는 거래가 없을 때 발생한 결제를 기록하세요.
+      manual_amount_label: 금액
+      manual_date_label: 날짜
+      record_payment: 결제 기록
+      mark_paid: 결제 완료로 표시
+      mark_paid_hint: 거래를 기록하지 않고 나머지를 정산합니다.
+      skip: 건너뛰다
+      snooze_week: 일주일에 한 번 다시 알림
+      reopen: 다시 열다
+      view_bill: 청구서 보기
+    mark_paid:
+      success: 청구서가 결제 완료로 표시됨
+    skip:
+      success: 청구서를 건너뛰었습니다.
+    reopen:
+      success: 청구서가 다시 열렸습니다.
+    snooze:
+      success: "%{date}까지 일시 중지되었습니다."
+      invalid_date: 해당 날짜를 읽을 수 없습니다.
+    override_amount:
+      success: 예상 금액이 업데이트되었습니다.
