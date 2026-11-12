@@ -1,0 +1,273 @@
+ko:
+  brex_items:
+    default_connection_name: Brex 연결
+    account_metadata:
+      provider: Brex
+      separator: " • "
+    kinds:
+      cash: 현금
+      card: 카드
+    statuses:
+      ACTIVE: 활성
+      active: 활성
+      CLOSED: 종료됨
+      closed: 종료됨
+      frozen: 동결됨
+      FROZEN: 동결됨
+    create:
+      success: Brex 연결을 만들었습니다
+    default_card_name: Brex 카드
+    default_cash_name: "Brex 현금 %{id}"
+    destroy:
+      success: Brex 연결을 삭제했습니다
+    index:
+      title: Brex 연결
+    institution_summary:
+      none: 연결된 금융기관 없음
+      one: "%{name}"
+      count:
+        one: "%{count}개 금융기관"
+        other: "%{count}개 금융기관"
+    sync_status:
+      no_accounts: 계좌를 찾을 수 없음
+      all_synced:
+        one: "%{count}개 계좌 동기화 완료"
+        other: "%{count}개 계좌 동기화 완료"
+      partial_setup: "%{synced}개 동기화 완료, %{pending}개 설정 필요"
+    api_error:
+      common_issues: "일반적인 문제:"
+      expired_credentials: Brex에서 새 API 토큰을 발급하세요.
+      expired_credentials_label: "만료된 인증 정보:"
+      heading: Brex에 연결할 수 없음
+      invalid_token: 제공업체 설정에서 API 토큰을 확인하세요.
+      invalid_token_label: "잘못된 API 토큰:"
+      network: 인터넷 연결을 확인하세요.
+      network_label: "네트워크 문제:"
+      permissions: 토큰에 계좌 및 거래 읽기 전용 권한 범위가 있는지 확인하세요.
+      permissions_label: "권한 부족:"
+      service: Brex API를 일시적으로 사용할 수 없을 수 있습니다.
+      service_label: "서비스 장애:"
+      settings_link: 제공업체 설정 확인
+      title: Brex 연결 오류
+    errors:
+      unexpected_error: 예기치 않은 오류가 발생했습니다. 나중에 다시 시도하세요.
+    entries:
+      default_name: Brex 거래
+    loading:
+      loading_message: Brex 계좌를 불러오는 중...
+      loading_title: 불러오는 중
+    link_accounts:
+      all_already_linked:
+        one: "선택한 계좌(%{names})가 이미 연결되어 있습니다"
+        other: "선택한 %{count}개 계좌가 모두 이미 연결되어 있습니다: %{names}"
+      api_error: "API 오류: %{message}"
+      invalid_account_names:
+        one: "이름이 비어 있는 계좌는 연결할 수 없습니다"
+        other: "이름이 비어 있는 %{count}개 계좌는 연결할 수 없습니다"
+      invalid_account_type: 지원하지 않는 Brex 계좌 유형입니다
+      link_failed: 계좌 연결에 실패했습니다
+      no_accounts_selected: 계좌를 하나 이상 선택하세요
+      no_api_token: Brex API 토큰을 찾을 수 없습니다. 제공업체 설정에서 구성하세요.
+      partial_invalid: "%{created_count}개 계좌를 연결했습니다. %{already_linked_count}개 계좌는 이미 연결되어 있고, %{invalid_count}개 계좌는 이름이 올바르지 않습니다"
+      partial_success: "%{created_count}개 계좌를 연결했습니다. %{already_linked_count}개 계좌는 이미 연결되어 있습니다: %{already_linked_names}"
+      select_connection: 계좌를 연결하기 전에 Brex 연결을 선택하세요.
+      success:
+        one: "%{count}개 계좌를 성공적으로 연결했습니다"
+        other: "%{count}개 계좌를 성공적으로 연결했습니다"
+    brex_item:
+      accounts_need_setup: 계좌 설정 필요
+      delete: 연결 삭제
+      deletion_in_progress: 삭제 중...
+      error: 오류
+      no_accounts_description: 이 연결에는 아직 연결된 계좌가 없습니다.
+      no_accounts_title: 계좌 없음
+      setup_action: 새 계좌 설정
+      setup_description: "%{total}개 계좌 중 %{linked}개가 연결되었습니다. 새로 가져온 Brex 계좌의 유형을 선택하세요."
+      setup_needed: 새 계좌 설정 가능
+      status: "%{timestamp} 전 동기화됨"
+      status_never: 동기화한 적 없음
+      status_with_summary: "%{timestamp} 전 마지막 동기화 - %{summary}"
+      syncing: 동기화 중...
+      total: 합계
+      unlinked: 연결 안 됨
+    provider_panel:
+      add_connection: Brex 연결 추가
+      base_url_label: 기본 URL(선택 사항)
+      base_url_placeholder: https://api.brex.com
+      connection_name_label: 연결 이름
+      connection_name_placeholder: 사업자 당좌예금
+      default_connection_name: Brex 연결
+      disconnect: 연결 해제
+      disconnect_label: "%{name} 연결 해제"
+      disconnect_confirm: "%{name} 연결을 해제할까요?"
+      encryption_warning:
+        title: 데이터베이스 암호화가 구성되지 않았습니다
+        message: 운영 환경에서 Brex 토큰을 추가하기 전에 Active Record 암호화 키를 구성하세요. 암호화 키가 없으면 Sure는 다른 제공업체 레코드와 마찬가지로 Brex 인증 정보와 스냅샷을 평문으로 저장합니다.
+      instructions:
+        copy_token_html: "토큰을 복사해 아래에서 이름이 지정된 연결로 추가하세요. Sure는 이 가족의 동기화에만 토큰을 저장합니다."
+        create_token: "다음 읽기 전용 권한 범위로 API 토큰을 만드세요: accounts.cash.readonly, accounts.card.readonly, transactions.cash.readonly, transactions.card.readonly"
+        open_tokens: 연결하려는 회사의 Brex 개발자/API 토큰 설정으로 이동하세요
+        sign_in_html: "%{link}에 방문해 연결할 계정에 로그인하세요"
+      keep_token_placeholder: 현재 토큰을 유지하려면 비워 두세요
+      sandbox_note_html: "동기화하려는 각 Brex 회사/API 토큰마다 별도의 이름 지정 연결을 사용하세요. 운영 환경에서는 기본 URL을 비워 두세요. 스테이징은 Brex가 승인한 테스트에만 사용할 수 있으며 고객 토큰은 지원하지 않습니다."
+      setup_accounts: 계좌 설정
+      sync: 동기화
+      token_label: 토큰
+      token_placeholder: 여기에 토큰 붙여넣기
+      update_connection: 연결 업데이트
+    provider_connection:
+      default_description: Brex 계좌에 연결
+      default_name: Brex
+      description: "%{name}을(를) 사용해 연결"
+      name: "Brex - %{name}"
+    select_accounts:
+      accounts_selected: 계좌 선택됨
+      api_error: "API 오류: %{message}"
+      cancel: 취소
+      configure_name_in_brex: "가져올 수 없습니다 - Brex에서 계좌 이름을 설정하세요"
+      description: "%{product_name} 계좌에 연결할 계좌를 선택하세요."
+      link_accounts: 선택한 계좌 연결
+      no_accounts_found: 계좌를 찾을 수 없습니다. API 토큰 설정을 확인하세요.
+      no_api_token: Brex API 토큰을 찾을 수 없습니다. 제공업체 설정에서 구성하세요.
+      no_credentials_configured: 먼저 제공업체 설정에서 Brex API 토큰을 구성하세요.
+      no_name_placeholder: "(이름 없음)"
+      select_connection: 제공업체 설정에서 Brex 연결을 선택하세요.
+      title: Brex 계좌 선택
+      unexpected_error: 예기치 않은 오류가 발생했습니다. 나중에 다시 시도하세요.
+    select_existing_account:
+      account_already_linked: 이 계좌는 이미 제공업체에 연결되어 있습니다
+      all_accounts_already_linked: 모든 Brex 계좌가 이미 연결되어 있습니다
+      api_error: "API 오류: %{message}"
+      cancel: 취소
+      configure_name_in_brex: "가져올 수 없습니다 - Brex에서 계좌 이름을 설정하세요"
+      description: 이 계좌에 연결할 Brex 계좌를 선택하세요. 거래가 자동으로 동기화되고 중복 제거됩니다.
+      link_account: 계좌 연결
+      no_account_specified: 계좌가 지정되지 않았습니다
+      no_accounts_found: Brex 계좌를 찾을 수 없습니다. API 토큰 설정을 확인하세요.
+      no_api_token: Brex API 토큰을 찾을 수 없습니다. 제공업체 설정에서 구성하세요.
+      no_credentials_configured: 먼저 제공업체 설정에서 Brex API 토큰을 구성하세요.
+      no_name_placeholder: "(이름 없음)"
+      select_connection: 제공업체 설정에서 Brex 연결을 선택하세요.
+      title: "%{account_name} 계좌를 Brex에 연결"
+      unexpected_error: 예기치 않은 오류가 발생했습니다. 나중에 다시 시도하세요.
+    setup_required:
+      description: Brex 계좌를 연결하려면 먼저 Brex API 토큰을 구성해야 합니다.
+      heading: API 토큰이 구성되지 않음
+      settings_link: 제공업체 설정으로 이동
+      setup_steps: "설정 단계:"
+      steps:
+        enter_token: Brex API 토큰 입력
+        find_section_html: "<strong>Brex</strong> 섹션 찾기"
+        open_settings_html: "<strong>Settings > Providers</strong>로 이동"
+        return_to_link: 여기로 돌아와 계좌 연결
+      title: Brex 설정 필요
+    subtype_select:
+      placeholder:
+        subtype: 하위 유형 선택
+        type: 유형 선택
+    link_existing_account:
+      account_already_linked: 이 계좌는 이미 제공업체에 연결되어 있습니다
+      api_error: "API 오류: %{message}"
+      invalid_account_name: 이름이 비어 있는 계좌는 연결할 수 없습니다
+      missing_parameters: 필수 매개변수가 누락되었습니다
+      no_account_specified: 계좌가 지정되지 않았습니다
+      no_api_token: Brex API 토큰을 찾을 수 없습니다. 제공업체 설정에서 구성하세요.
+      provider_account_already_linked: 이 Brex 계좌는 이미 다른 계좌에 연결되어 있습니다
+      provider_account_not_found: Brex 계좌를 찾을 수 없습니다
+      select_connection: 계좌를 연결하기 전에 Brex 연결을 선택하세요.
+      success: "%{account_name} 계좌를 Brex에 성공적으로 연결했습니다"
+    setup_accounts:
+      account_type_label: "계좌 유형:"
+      all_accounts_linked: "모든 Brex 계좌가 이미 설정되었습니다."
+      api_error: "API 오류: %{message}"
+      fetch_failed: "계좌를 가져오지 못했습니다"
+      no_accounts_to_setup: "설정할 계좌 없음"
+      no_api_token: Brex API 토큰을 찾을 수 없습니다. 제공업체 설정에서 구성하세요.
+      account_types:
+        skip: 이 계좌 건너뛰기
+        depository: 당좌예금 또는 저축예금
+        credit_card: 신용카드
+        investment: 투자 계좌
+        loan: 대출 또는 주택담보대출
+        other_asset: 기타 자산
+      subtype_labels:
+        depository: "계좌 하위 유형:"
+        credit_card: ""
+        investment: "투자 유형:"
+        loan: "대출 유형:"
+        other_asset: ""
+      subtype_messages:
+        credit_card: "신용카드는 자동으로 신용카드 계좌로 설정됩니다."
+        other_asset: "기타 자산에는 추가 옵션이 필요하지 않습니다."
+      subtypes:
+        depository:
+          checking: 당좌예금
+          savings: 저축예금
+          hsa: 건강 저축 계좌
+          cd: 양도성 예금증서
+          money_market: 머니마켓
+        investment:
+          brokerage: 증권 계좌
+          pension: 연금
+          retirement: 퇴직연금
+          "401k": "401(k)"
+          roth_401k: "Roth 401(k)"
+          "403b": "403(b)"
+          tsp: 연방 저축 저축 플랜
+          "529_plan": "529 플랜"
+          hsa: 건강 저축 계좌
+          mutual_fund: 뮤추얼 펀드
+          ira: 전통형 IRA
+          roth_ira: Roth IRA
+          angel: 엔젤 투자
+        loan:
+          mortgage: 주택담보대출
+          student: 학자금 대출
+          auto: 자동차 대출
+          other: 기타 대출
+      balance: 잔액
+      cancel: 취소
+      choose_account_type: "각 Brex 계좌에 맞는 유형을 선택하세요:"
+      create_accounts: 계좌 만들기
+      creating_accounts: 계좌 만드는 중...
+      historical_data_range: "과거 데이터 범위:"
+      subtitle: 가져온 계좌에 맞는 유형을 선택하세요
+      sync_start_date_help: 거래 내역을 얼마나 과거부터 동기화할지 선택하세요. 최대 3년 전까지의 내역을 가져올 수 있습니다.
+      sync_start_date_label: "거래 동기화 시작일:"
+      title: Brex 계좌 설정
+    complete_account_setup:
+      all_skipped: "모든 계좌를 건너뛰었습니다. 계좌를 만들지 않았습니다."
+      creation_failed: "계좌를 만들지 못했습니다: %{error}"
+      creation_failed_count: "%{count}개 계좌를 만들지 못했습니다."
+      no_accounts: "설정할 계좌가 없습니다."
+      partial_skipped: "%{created_count}개 계좌를 만들었습니다. %{skipped_count}개 계좌는 건너뛰었습니다."
+      partial_success: "%{created_count}개 계좌를 만들었지만 %{failed_count}개 계좌 생성에 실패했습니다."
+      success: "%{count}개 계좌를 성공적으로 만들었습니다."
+      unexpected_error: 예기치 않은 오류가 발생했습니다.
+    sync:
+      success: 동기화가 시작되었습니다
+    syncer:
+      account_processing_failed:
+        one: "%{count}개 Brex 계좌 처리에 실패했습니다."
+        other: "%{count}개 Brex 계좌 처리에 실패했습니다."
+      account_sync_failed:
+        one: "%{count}개 Brex 계좌 동기화를 예약하지 못했습니다."
+        other: "%{count}개 Brex 계좌 동기화를 예약하지 못했습니다."
+      accounts_need_setup:
+        one: "%{count}개 계좌 설정 필요..."
+        other: "%{count}개 계좌 설정 필요..."
+      accounts_failed:
+        one: "%{count}개 Brex 계좌를 가져오지 못했습니다."
+        other: "%{count}개 Brex 계좌를 가져오지 못했습니다."
+      calculating_balances: 잔액 계산 중...
+      checking_account_configuration: 계좌 설정 확인 중...
+      credentials_invalid: Brex API 토큰 또는 계좌 권한이 올바르지 않습니다
+      failed: 동기화에 실패했습니다. 다시 시도하거나 고객 지원에 문의하세요.
+      import_failed: Brex 가져오기에 실패했습니다.
+      importing_accounts: Brex에서 계좌를 가져오는 중...
+      processing_transactions: 거래 처리 중...
+      transactions_failed:
+        one: "%{count}개 Brex 계좌에서 거래 가져오기에 실패했습니다."
+        other: "%{count}개 Brex 계좌에서 거래 가져오기에 실패했습니다."
+    update:
+      success: Brex 연결이 업데이트되었습니다

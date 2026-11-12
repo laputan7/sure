@@ -1,0 +1,47 @@
+ko:
+  family_exports:
+    access_denied: 접근이 거부되었습니다
+    create:
+      success: 내보내기를 시작했습니다. 잠시 후 다운로드할 수 있습니다.
+    delete_confirmation: 이 내보내기를 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.
+    delete_failed_confirmation: 실패한 내보내기를 삭제하시겠습니까?
+    cancel:
+      cancelled: 내보내기를 실패로 표시했습니다. 바로 새 내보내기를 만들 수 있습니다.
+      not_cancellable: 지금은 이 내보내기를 실패로 표시할 수 없습니다 — 작업이 아직 실행 중일 수 있습니다. 한 시간 동안 비활성 상태가 된 후 다시 시도하세요.
+    destroy:
+      success: 내보내기를 삭제했습니다
+    export_not_ready: 다운로드할 내보내기가 아직 준비되지 않았습니다
+    exporting: 내보내는 중...
+    new:
+      dialog_title: 데이터 내보내기
+      dialog_subtitle: 모든 금융 데이터 다운로드
+      whats_included: "포함 항목:"
+      accounts_and_balances: 모든 계좌 및 잔액
+      transaction_history: 거래 내역
+      investment_trades: 투자 매매 내역
+      categories_tags_rules: 카테고리, 태그 및 규칙
+      note_label: 참고
+      note_description: 이 내보내기에는 모든 데이터가 포함되지만 일부 데이터만 CSV 가져오기 기능으로 다시 가져올 수 있습니다. 계좌, 거래(카테고리 및 태그 포함), 매매 내역 가져오기를 지원합니다. 그 외 계좌 데이터는 기록용이며 가져올 수 없습니다.
+      cancel: 취소
+      export_data: 데이터 내보내기
+    index:
+      title: 내보내기
+      new: 새 내보내기
+    table:
+      title: 내보내기
+      header:
+        date: 날짜
+        filename: 파일 이름
+        status: 상태
+        actions: 작업
+      row:
+        status:
+          in_progress: 진행 중
+          complete: 완료
+          failed: 실패
+        actions:
+          delete: 삭제
+          download: 다운로드
+          mark_failed: 실패로 표시
+          confirm_mark_failed: 이 내보내기는 한동안 비활성 상태이며 백그라운드 작업이 중단된 것 같습니다. 실패로 표시하시겠습니까? 바로 새 내보내기를 만들 수 있습니다.
+      empty: 아직 내보낸 항목이 없습니다.
