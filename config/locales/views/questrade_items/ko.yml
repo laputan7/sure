@@ -1,0 +1,282 @@
+---
+ko:
+  questrade_items:
+    default_name: "Questrade 연결"
+    # Model method strings (i18n for item_model.rb)
+    sync_status:
+      no_accounts: "계좌를 찾을 수 없습니다"
+      synced:
+        one: "계좌 %{count}개 동기화 완료"
+        other: "계좌 %{count}개 동기화 완료"
+      synced_with_setup: "%{linked}개 동기화 완료, %{unlinked}개 설정 필요"
+    institution_summary:
+      none: "연결된 금융기관이 없습니다"
+      count:
+        one: "금융기관 %{count}곳"
+        other: "금융기관 %{count}곳"
+    errors:
+      provider_not_configured: "Questrade 제공업체가 설정되지 않았습니다"
+
+    # Syncer status messages
+    sync:
+      status:
+        importing: "Questrade에서 계좌를 가져오는 중..."
+        processing: "보유 자산 및 활동을 처리하는 중..."
+        calculating: "잔액을 계산하는 중..."
+        importing_data: "계좌 데이터를 가져오는 중..."
+        checking_setup: "계좌 설정을 확인하는 중..."
+        needs_setup: "계좌 %{count}개 설정 필요..."
+      success: "동기화를 시작했습니다"
+
+    # Panel (settings view)
+    panel:
+      eyebrow: "설정 · 데스크톱 전용"
+      help_text: "Questrade API 문서"
+      disconnect: "연결 해제"
+      disconnect_confirm: "Questrade 연결을 해제할까요? 연결이 삭제되고 동기화된 계좌의 연결도 해제됩니다."
+      steps:
+        s1_html: 'Sign in to the <a href="https://my.questrade.com" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline">Questrade portal</a> on a desktop browser. The API settings are not available in the mobile app.'
+        s2: "Settings를 열고 General settings에서 IQ API 설정을 수정하세요."
+        s3_html: "API 액세스 창에서 <strong>My applications</strong> 아래의 <strong>Manage</strong>를 클릭하세요."
+        s4: "이름과 설명을 입력해 개인 앱을 등록한 뒤 저장하세요."
+        s5: "새 기기를 추가하고 토큰을 생성하세요."
+        s6: "생성된 토큰을 아래에 붙여 넣고 저장하세요."
+      setup_instructions: "설정 안내:"
+      step_1: "Questrade 대시보드에서 인증 정보를 확인하세요"
+      step_2: "아래에 인증 정보를 입력하고 저장 버튼을 클릭하세요"
+      step_3: "연결이 완료되면 Accounts 탭에서 새 계좌를 설정하세요"
+      field_descriptions: "항목 설명:"
+      optional: "(선택 사항)"
+      required: "(필수)"
+      optional_with_default: "(선택 사항, 기본값: %{default_value})"
+      save_button: "설정 저장"
+      update_button: "설정 업데이트"
+      token_refresh_hint: "Questrade 토큰은 계좌를 동기화할 때마다 자동 갱신됩니다. 7일 넘게 사용하지 않아 연결이 만료된 경우, 연결을 해제하지 않고 여기에서 새 토큰을 붙여 넣어 다시 활성화할 수 있습니다."
+      status_configured_html: "설정이 완료되어 사용할 수 있습니다. <a href=\"%{accounts_path}\" class=\"link\">Accounts</a> 탭에서 계좌를 관리하고 설정하세요."
+      status_not_configured: "설정되지 않음"
+      fields:
+        refresh_token:
+          label: "갱신 토큰"
+          description: "Questrade 갱신 토큰"
+          placeholder_new: "갱신 토큰을 여기에 붙여 넣으세요"
+          placeholder_update: "업데이트할 새 갱신 토큰을 입력하세요"
+        api_server:
+          label: "API 서버"
+          description: "Questrade API 서버"
+          placeholder_new: "API 서버 주소를 여기에 붙여 넣으세요"
+          placeholder_update: "업데이트할 새 API 서버 주소를 입력하세요"
+
+    # CRUD success messages
+    create:
+      success: "Questrade 연결을 만들었습니다"
+    update:
+      success: "Questrade 연결을 업데이트했습니다"
+    destroy:
+      success: "Questrade 연결을 삭제했습니다"
+    index:
+      title: "Questrade 연결"
+
+    # Loading states
+    loading:
+      loading_message: "Questrade 계좌를 불러오는 중..."
+      loading_title: "불러오는 중"
+
+    # Account linking
+    link_accounts:
+      all_already_linked:
+        one: "선택한 계좌(%{names})는 이미 연결되어 있습니다"
+        other: "선택한 계좌 %{count}개가 모두 이미 연결되어 있습니다: %{names}"
+      api_error: "API 오류: %{message}"
+      invalid_account_names:
+        one: "이름이 비어 있는 계좌는 연결할 수 없습니다"
+        other: "이름이 비어 있는 계좌 %{count}개를 연결할 수 없습니다"
+      link_failed: "계좌 연결에 실패했습니다"
+      no_accounts_selected: "계좌를 하나 이상 선택하세요"
+      no_api_key: "Questrade API 키를 찾을 수 없습니다. Provider Settings에서 설정하세요."
+      partial_invalid: "계좌 %{created_count}개를 연결했습니다. %{already_linked_count}개는 이미 연결되어 있으며, %{invalid_count}개는 이름이 올바르지 않습니다."
+      partial_success: "계좌 %{created_count}개를 연결했습니다. %{already_linked_count}개는 이미 연결되어 있습니다: %{already_linked_names}"
+      success:
+        one: "계좌 %{count}개를 연결했습니다"
+        other: "계좌 %{count}개를 연결했습니다"
+
+    # Provider item display (used in _item partial)
+    questrade_item:
+      kind: 증권 계좌
+      accounts_need_setup: "계좌 설정 필요"
+      delete: "연결 삭제"
+      deletion_in_progress: "삭제 중..."
+      error: "오류"
+      more_accounts_available:
+        one: "계좌 %{count}개 더 사용 가능"
+        other: "계좌 %{count}개 더 사용 가능"
+      no_accounts_description: "이 연결에는 아직 연결된 계좌가 없습니다."
+      no_accounts_title: "계좌 없음"
+      provider_name: "Questrade"
+      requires_update: "연결 업데이트 필요"
+      setup_action: "새 계좌 설정"
+      setup_description: "계좌 %{total}개 중 %{linked}개가 연결되었습니다. 새로 가져온 Questrade 계좌의 유형을 선택하세요."
+      setup_needed: "새 계좌 설정 준비 완료"
+      status: "%{timestamp} 전에 동기화"
+      status_never: "동기화한 적 없음"
+      status_with_summary: "마지막 동기화: %{timestamp} 전 - %{summary}"
+      syncing: "동기화 중..."
+      total: "합계"
+      unlinked: "연결 안 됨"
+      update_credentials: "인증 정보 업데이트"
+
+    # Select accounts view
+    select_accounts:
+      accounts_selected: "개 계좌 선택됨"
+      api_error: "API 오류: %{message}"
+      cancel: "취소"
+      configure_name_in_provider: "가져올 수 없습니다 - Questrade에서 계좌 이름을 설정하세요"
+      description: "%{product_name} 계좌에 연결할 계좌를 선택하세요."
+      link_accounts: "선택한 계좌 연결"
+      no_accounts_found: "계좌를 찾을 수 없습니다. API 키 설정을 확인하세요."
+      no_api_key: "Questrade API 키가 설정되지 않았습니다. Settings에서 설정하세요."
+      no_credentials_configured: "먼저 Provider Settings에서 Questrade 인증 정보를 설정하세요."
+      no_name_placeholder: "(이름 없음)"
+      title: "Questrade 계좌 선택"
+
+    # Select existing account view
+    select_existing_account:
+      page_title: "Link a Questrade account"
+      dialog_title: "Link to a Questrade account"
+      linking_label: "연결 중"
+      none_available: "No unlinked Questrade accounts available."
+      buttons:
+        cancel: "취소"
+        link: "연결"
+      account_already_linked: "이 계좌는 이미 제공업체에 연결되어 있습니다"
+      all_accounts_already_linked: "Questrade 계좌가 모두 이미 연결되어 있습니다"
+      api_error: "API 오류: %{message}"
+      balance_label: "잔액:"
+      cancel: "취소"
+      cancel_button: "취소"
+      configure_name_in_provider: "가져올 수 없습니다 - Questrade에서 계좌 이름을 설정하세요"
+      connect_hint: "자동 동기화를 사용하려면 Questrade 계좌를 연결하세요."
+      description: "이 계좌에 연결할 Questrade 계좌를 선택하세요. 거래가 자동으로 동기화되고 중복 제거됩니다."
+      header: "Questrade에 연결"
+      link_account: "계좌 연결"
+      link_button: "이 계좌 연결"
+      linking_to: "연결 대상:"
+      no_account_specified: "계좌가 지정되지 않았습니다"
+      no_accounts: "연결되지 않은 Questrade 계좌가 없습니다."
+      no_accounts_found: "Questrade 계좌를 찾을 수 없습니다. API 키 설정을 확인하세요."
+      no_api_key: "Questrade API 키가 설정되지 않았습니다. Settings에서 설정하세요."
+      no_credentials_configured: "먼저 Provider Settings에서 Questrade 인증 정보를 설정하세요."
+      no_name_placeholder: "(이름 없음)"
+      settings_link: "Provider Settings로 이동"
+      subtitle: "이 계좌를 Questrade 계좌 중 하나에 연결하세요"
+      title: "%{account_name}을(를) Questrade에 연결"
+
+    # Link existing account
+    link_existing_account:
+      account_already_linked: "이 계좌는 이미 제공업체에 연결되어 있습니다"
+      api_error: "API 오류: %{message}"
+      invalid_account_name: "이름이 비어 있는 계좌는 연결할 수 없습니다"
+      provider_account_already_linked: "이 Questrade 계좌는 이미 다른 계좌에 연결되어 있습니다"
+      provider_account_not_found: "Questrade 계좌를 찾을 수 없습니다"
+      missing_parameters: "필수 매개변수가 누락되었습니다"
+      no_api_key: "Questrade API 키를 찾을 수 없습니다. Provider Settings에서 설정하세요."
+      success: "%{account_name} 계좌를 Questrade에 연결했습니다"
+
+    # Setup accounts wizard
+    setup_accounts:
+      page_title: "Set up Questrade accounts"
+      dialog_title: "Set up your Questrade accounts"
+      all_linked: "All Questrade accounts are already linked."
+      import_as: "가져오기 유형"
+      buttons:
+        cancel: "취소"
+        create: "계좌 만들기"
+        done: "완료"
+      types:
+        investment: "투자"
+        depository: "현금 / 예금"
+        skip: "이 계좌 건너뛰기"
+      account_type_label: "계좌 유형:"
+      accounts_count:
+        one: "계좌 %{count}개 사용 가능"
+        other: "계좌 %{count}개 사용 가능"
+      all_accounts_linked: "Questrade 계좌가 모두 이미 설정되었습니다."
+      api_error: "API 오류: %{message}"
+      creating: "계좌 생성 중..."
+      fetch_failed: "계좌를 가져오지 못했습니다"
+      import_selected: "선택한 계좌 가져오기"
+      instructions: "Questrade에서 가져올 계좌를 선택하세요. 여러 계좌를 선택할 수 있습니다."
+      no_accounts: "이 Questrade 연결에서 연결되지 않은 계좌를 찾을 수 없습니다."
+      no_accounts_to_setup: "설정할 계좌 없음"
+      no_api_key: "Questrade API 키가 설정되지 않았습니다. 연결 설정을 확인하세요."
+      select_all: "모두 선택"
+      account_types:
+        skip: "이 계좌 건너뛰기"
+        depository: "당좌 또는 저축 계좌"
+        credit_card: "신용카드"
+        investment: "투자 계좌"
+        crypto: "암호화폐 계좌"
+        loan: "대출 또는 주택담보대출"
+        other_asset: "기타 자산"
+      subtype_labels:
+        depository: "계좌 세부 유형:"
+        credit_card: ""
+        investment: "투자 유형:"
+        crypto: ""
+        loan: "대출 유형:"
+        other_asset: ""
+      subtype_messages:
+        credit_card: "신용카드는 자동으로 신용카드 계좌로 설정됩니다."
+        other_asset: "기타 자산에는 추가 옵션이 필요하지 않습니다."
+        crypto: "암호화폐 계좌는 보유 자산과 거래를 추적하도록 설정됩니다."
+      subtypes:
+        depository:
+          checking: "당좌 예금"
+          savings: "저축 예금"
+          hsa: "건강저축계좌"
+          cd: "양도성예금증서"
+          money_market: "머니마켓"
+        investment:
+          brokerage: "증권 계좌"
+          pension: "연금"
+          retirement: "퇴직연금"
+          "401k": "401(k)"
+          roth_401k: "Roth 401(k)"
+          "403b": "403(b)"
+          tsp: "절약저축플랜"
+          "529_plan": "529 플랜"
+          hsa: "건강저축계좌"
+          mutual_fund: "뮤추얼 펀드"
+          ira: "전통형 IRA"
+          roth_ira: "Roth IRA"
+          angel: "엔젤 투자"
+        loan:
+          mortgage: "주택담보대출"
+          student: "학자금 대출"
+          auto: "자동차 대출"
+          other: "기타 대출"
+      balance: "잔액"
+      cancel: "취소"
+      choose_account_type: "각 Questrade 계좌에 맞는 유형을 선택하세요:"
+      create_accounts: "계좌 만들기"
+      creating_accounts: "계좌 생성 중..."
+      historical_data_range: "과거 데이터 범위:"
+      subtitle: "각 계좌를 가져오는 방법을 선택하세요"
+      sync_start_date_help: "거래 내역을 언제부터 동기화할지 선택하세요."
+      sync_start_date_label: "거래 동기화 시작일:"
+      title: "Questrade 계좌 설정"
+
+    # Complete account setup
+    setup_required:
+      title: 먼저 Questrade를 연결하세요
+      not_configured_title: Questrade가 아직 연결되지 않았습니다
+      not_configured_description: Provider settings에서 Questrade를 연결한 뒤 여기로 돌아와 계좌를 연결하세요.
+      go_to_provider_settings: Provider settings로 이동
+    complete_account_setup:
+      all_skipped: "모든 계좌를 건너뛰어 생성된 계좌가 없습니다."
+      creation_failed: "계좌 생성 실패: %{error}"
+      no_accounts: "설정할 계좌가 없습니다."
+      success: "계좌 %{count}개를 만들었습니다."
+
+    # Preload accounts
+    preload_accounts:
+      no_credentials_configured: "먼저 Provider Settings에서 Questrade 인증 정보를 설정하세요."
