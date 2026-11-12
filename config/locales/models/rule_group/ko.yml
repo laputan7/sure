@@ -1,0 +1,10 @@
+---
+ko:
+  activerecord:
+    models:
+      rule_group:
+        one: "그룹"
+        other: "그룹"
+    attributes:
+      rule_group:
+        name: "이름"

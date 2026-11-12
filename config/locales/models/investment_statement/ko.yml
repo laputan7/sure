@@ -1,0 +1,4 @@
+ko:
+  models:
+    investment_statement:
+      cash: 현금

@@ -1,0 +1,7 @@
+ko:
+  activerecord:
+    errors:
+      models:
+        loan:
+          invalid_rate_change: 금리 변경 행에는 적용 날짜와 금리가 모두 필요합니다.
+          rate_change_before_origination: 금리 변경은 대출 실행일보다 앞선 날짜에 적용될 수 없습니다.

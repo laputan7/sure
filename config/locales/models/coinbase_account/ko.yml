@@ -1,0 +1,4 @@
+ko:
+  coinbase:
+    processor:
+      paid_via: "%{method}(으)로 결제"

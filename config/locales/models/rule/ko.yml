@@ -1,0 +1,46 @@
+---
+ko:
+  activerecord:
+    attributes:
+      rule:
+        new_rule_group_name: "새 그룹"
+        rule_group: "그룹"
+    errors:
+      models:
+        rule:
+          min_actions: "작업을 하나 이상 지정해야 합니다"
+          duplicate_actions: "규칙에 중복된 작업이 있습니다: %{types}"
+          nested_conditions: "복합 조건은 중첩할 수 없습니다"
+          split_not_alone: "분할 규칙에 다른 작업을 함께 지정할 수 없습니다"
+        rule/action:
+          attributes:
+            value:
+              invalid_config: "올바른 분할 설정이어야 합니다"
+              invalid_split_count: "분할 수는 %{min}개에서 %{max}개 사이여야 합니다"
+              split_name_required: "분할 #%{index}의 이름을 입력해야 합니다"
+              split_name_too_long: "분할 #%{index}의 이름이 너무 깁니다(최대 255자)"
+              split_name_invalid: "분할 #%{index}의 이름에 사용할 수 없는 문자가 있습니다"
+              split_type_invalid: "분할 #%{index}의 유형은 고정 금액 또는 비율이어야 합니다"
+              split_share_invalid: "분할 #%{index}의 배분액은 양수여야 합니다"
+              split_category_invalid: "분할 #%{index}의 카테고리는 이 가족에 속하지 않습니다"
+              split_merchant_invalid: "분할 #%{index}의 가맹점은 이 가족에 속하지 않습니다"
+              split_tags_invalid: "분할 #%{index}에 이 가족에 속하지 않는 태그가 있습니다"
+              percentages_must_total_100: "비율의 합계는 100이어야 합니다(현재 %{total})"
+              fixed_requires_exact_amount_condition: "고정 금액 분할을 사용하려면 거래 금액이 정확히 일치하는 규칙 조건(예: 금액 = 42.00)이 필요합니다. 그렇지 않으면 분할액 합계가 일치하는 모든 거래의 총액과 정확히 맞는다고 보장할 수 없습니다"
+              fixed_shares_must_equal_condition_amount: "분할액 합계는 이 규칙 조건에서 요구하는 정확한 금액 %{amount}와 일치해야 합니다"
+
+        rule/condition:
+          attributes:
+            value:
+              regex_invalid: "올바른 정규식이 아닙니다"
+              regex_too_complex: "안전하게 실행하기에 너무 복잡합니다"
+              regex_too_long: "너무 깁니다(최대 %{count}자)"
+              regex_backreference: "역참조(\\1부터 \\9까지)는 사용할 수 없습니다"
+  rule:
+    actions:
+      set_transaction_merchant:
+        not_accessible: "접근할 수 없는 계좌의 가맹점"
+        unassigned: "%{name} (더 이상 할당되지 않음)"
+        unavailable: "더 이상 사용할 수 없는 가맹점"
+    conditions:
+      unsupported_label: "지원되지 않음 (%{type})"

@@ -1,0 +1,29 @@
+---
+ko:
+  provider_warnings:
+    limited_investment_data: "이 제공업체의 투자 데이터는 제한적입니다. 활동 유형(매수, 매도, 배당)을 사용할 수 없어 예산 정확도에 영향을 줄 수 있습니다. 투자 거래를 제외하거나 분류하는 규칙을 만드는 것을 고려해 보세요."
+    lunchflow_accounts_failed:
+      one: "Lunchflow 가져오기: %{count}개 계좌 업데이트 실패"
+      other: "Lunchflow 가져오기: %{count}개 계좌 업데이트 실패"
+    lunchflow_transactions_failed:
+      one: "Lunchflow 가져오기: %{count}개 계좌의 거래를 가져오지 못했습니다"
+      other: "Lunchflow 가져오기: %{count}개 계좌의 거래를 가져오지 못했습니다"
+    lunchflow_import_error: "Lunchflow 가져오기: %{error}"
+    truelayer_accounts_failed:
+      one: "TrueLayer 가져오기: %{count}개 계좌 업데이트 실패"
+      other: "TrueLayer 가져오기: %{count}개 계좌 업데이트 실패"
+    truelayer_transactions_failed:
+      one: "TrueLayer 가져오기: %{count}개 계좌의 거래를 가져오지 못했습니다"
+      other: "TrueLayer 가져오기: %{count}개 계좌의 거래를 가져오지 못했습니다"
+    truelayer_balances_failed:
+      one: "TrueLayer 가져오기: %{count}개 계좌의 잔액을 가져오지 못했습니다"
+      other: "TrueLayer 가져오기: %{count}개 계좌의 잔액을 가져오지 못했습니다"
+    truelayer_processing_failed:
+      one: "TrueLayer 가져오기: %{count}개 계좌를 처리하지 못했습니다"
+      other: "TrueLayer 가져오기: %{count}개 계좌를 처리하지 못했습니다"
+    truelayer_entries_failed:
+      one: "TrueLayer 가져오기: %{count}개 거래를 가져오지 못했습니다"
+      other: "TrueLayer 가져오기: %{count}개 거래를 가져오지 못했습니다"
+    truelayer_scheduling_failed:
+      one: "TrueLayer 가져오기: %{count}개 계좌의 잔액 업데이트를 예약하지 못했습니다"
+      other: "TrueLayer 가져오기: %{count}개 계좌의 잔액 업데이트를 예약하지 못했습니다"

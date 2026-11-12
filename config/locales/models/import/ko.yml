@@ -1,0 +1,17 @@
+ko:
+  activerecord:
+    attributes:
+      import:
+        col_sep: 열 구분자
+        col_seps:
+          comma: 쉼표 (,)
+          semicolon: 세미콜론 (;)
+        currency: 통화
+        number_format: 숫자 형식
+    errors:
+      models:
+        import:
+          duplicate_headers: "CSV 헤더를 정규화한 결과 중복 열이 생겼습니다: %{columns}"
+          attributes:
+            raw_file_str:
+              invalid_csv_format: 올바른 CSV 형식이 아닙니다

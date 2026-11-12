@@ -1,0 +1,7 @@
+ko:
+  activerecord:
+    errors:
+      models:
+        merchant_import:
+          missing_columns: "필수 열이 없습니다: %{columns}"
+          duplicate_columns: "정규화 후 중복된 열 이름이 있습니다: %{columns}"

@@ -1,0 +1,7 @@
+ko:
+  activerecord:
+    errors:
+      models:
+        category_import:
+          own_parent: "카테고리 '%{name}'은(는) 자기 자신의 상위 항목이 될 수 없습니다"
+          missing_columns: "필수 열이 없습니다: %{columns}"

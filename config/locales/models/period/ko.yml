@@ -1,0 +1,56 @@
+---
+ko:
+  period:
+    last_day:
+      label_short: "1D"
+      label: "지난 하루"
+      comparison_label: "어제 대비"
+    current_week:
+      label_short: "WTD"
+      label: "이번 주"
+      comparison_label: "주 시작 대비"
+    last_7_days:
+      label_short: "7D"
+      label: "지난 7일"
+      comparison_label: "지난주 대비"
+    current_month:
+      label_short: "MTD"
+      label: "이번 달"
+      comparison_label: "월초 대비"
+    last_month:
+      label_short: "LM"
+      label: "지난달"
+      comparison_label: "지난달 대비"
+    last_30_days:
+      label_short: "30D"
+      label: "지난 30일"
+      comparison_label: "지난 30일 대비"
+    last_90_days:
+      label_short: "90D"
+      label: "지난 90일"
+      comparison_label: "지난 분기 대비"
+    current_year:
+      label_short: "YTD"
+      label: "올해"
+      comparison_label: "연초 대비"
+    last_365_days:
+      label_short: "365D"
+      label: "지난 365일"
+      comparison_label: "1년 전 대비"
+    last_5_years:
+      label_short: "5Y"
+      label: "지난 5년"
+      comparison_label: "5년 전 대비"
+    last_10_years:
+      label_short: "10Y"
+      label: "지난 10년"
+      comparison_label: "10년 전 대비"
+    all_time:
+      label_short: "All"
+      label: "전체 기간"
+      comparison_label: "시작 시점 대비"
+    custom:
+      label_short: "Custom"
+      label: "사용자 지정 기간"
+      comparison_label: "%{start_date}부터 %{end_date}까지"
+    range: "%{start_date} – %{end_date}"

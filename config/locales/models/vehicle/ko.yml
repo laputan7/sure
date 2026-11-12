@@ -1,0 +1,14 @@
+---
+ko:
+  activerecord:
+    attributes:
+      account/accountable:
+        purchase_date: 구매일
+      vehicle:
+        purchase_date: 구매일
+    errors:
+      models:
+        vehicle:
+          attributes:
+            purchase_date:
+              must_precede_entries: 계좌에서 가장 오래된 항목보다 이전 날짜여야 합니다
