@@ -1,0 +1,15 @@
+---
+ko:
+  password_resets:
+    disabled: Sure를 통한 비밀번호 재설정은 비활성화되어 있습니다. ID 제공자를 통해 비밀번호를 재설정하세요.
+    sso_only_user: 이 계좌는 SSO로 인증합니다. 로그인 정보를 관리하려면 관리자에게 문의하세요.
+    edit:
+      title: 비밀번호 재설정
+    new:
+      requested: 비밀번호 재설정 링크를 이메일로 보냈습니다. 메일을 확인하세요.
+      submit: 비밀번호 재설정
+      title: 비밀번호 재설정
+      back: 뒤로
+    update:
+      invalid_token: 토큰이 올바르지 않습니다.
+      success: 비밀번호가 재설정되었습니다.

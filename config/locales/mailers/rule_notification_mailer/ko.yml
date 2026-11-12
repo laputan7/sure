@@ -1,0 +1,16 @@
+---
+ko:
+  rule_notification_mailer:
+    digest:
+      subject:
+        one: "규칙에 일치하는 새 거래 1건이 %{product_name}에 있습니다"
+        other: "규칙에 일치하는 새 거래 %{count}건이 %{product_name}에 있습니다"
+      heading:
+        one: "규칙에 일치하는 새 거래 1건"
+        other: "규칙에 일치하는 새 거래 %{count}건"
+      intro: '다음 거래가 "%{rule}" 규칙에 일치했습니다:'
+      date: "날짜"
+      name: "이름"
+      account: "계좌"
+      amount: "금액"
+      cta: "거래 보기"

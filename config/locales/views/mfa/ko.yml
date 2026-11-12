@@ -1,0 +1,49 @@
+---
+ko:
+  mfa:
+    local_password_required: 이중 인증을 사용하려면 로컬 비밀번호가 필요합니다. 비밀번호는 ID 제공자에서 관리합니다.
+    backup_codes:
+      backup_codes_description: 각 코드는 한 번만 사용할 수 있습니다. 이 코드를 안전한 곳에 보관하세요.
+      backup_codes_title: 백업 코드
+      continue: 보안 설정으로 계속
+      description: 이 백업 코드를 안전한 곳에 보관하세요. 인증 앱에 접근할 수 없을 때 필요합니다.
+      page_title: 백업 코드
+      title: 백업 코드 저장
+    create:
+      code_already_used: 이미 사용한 코드입니다. 인증 앱의 다음 코드를 입력하세요.
+      invalid_code: 인증 코드가 올바르지 않습니다. 다시 시도하세요.
+      setup_failed: 이중 인증을 활성화하지 못했습니다. 다시 시도하세요.
+      invalid_password: 비밀번호가 올바르지 않습니다. 다시 시도하세요.
+    disable:
+      failure: 이중 인증을 비활성화하지 못했습니다. 다시 시도하세요.
+      invalid_password: 비밀번호가 올바르지 않습니다. 다시 시도하세요.
+      success: 이중 인증이 비활성화되었습니다
+    new:
+      code_label: 인증 코드
+      code_placeholder: 6자리 코드 입력
+      description: 이중 인증을 설정해 계좌 보안을 강화하세요
+      page_title: 이중 인증 설정
+      password_label: 비밀번호로 확인
+      password_placeholder: 비밀번호를 입력하세요
+      scan_description: Google Authenticator 또는 1Password 같은 인증 앱으로 이 QR 코드를 스캔하세요
+      scan_title: 1. QR 코드 스캔
+      secret_description: QR 코드를 스캔할 수 없다면 인증 앱에 이 비밀 키를 직접 입력하세요
+      secret_title: 수동 입력 코드
+      title: 이중 인증 설정
+      verify_button: 확인 후 2FA 활성화
+      verify_description: 인증 앱에서 6자리 코드를 입력하세요
+      verify_title: 2. 인증 코드 입력
+    verify:
+      description: 계속하려면 인증 앱의 코드를 입력하세요
+      or: 또는
+      page_title: 이중 인증 확인
+      title: 이중 인증
+      verify_button: 확인
+      webauthn_button: 패스키 또는 보안 키 사용
+      webauthn_unsupported: 이 브라우저는 패스키 또는 보안 키를 지원하지 않습니다.
+    verify_code:
+      invalid_code: 인증 코드가 올바르지 않습니다. 다시 시도하세요.
+    verify_webauthn:
+      invalid_credential: 패스키 또는 보안 키를 확인할 수 없습니다. 다시 시도하세요.
+    webauthn_options:
+      unavailable: 이 계좌에서 사용할 수 있는 패스키 또는 보안 키가 없습니다.

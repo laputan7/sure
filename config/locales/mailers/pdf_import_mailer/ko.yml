@@ -1,0 +1,5 @@
+---
+ko:
+  pdf_import_mailer:
+    next_steps:
+      subject: "PDF 문서 분석이 완료되었습니다 - %{product_name}"
