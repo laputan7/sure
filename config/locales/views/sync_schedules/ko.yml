@@ -1,0 +1,19 @@
+---
+ko:
+  sync_schedules:
+    menu_item: 동기화 주기
+    intervals:
+      minutes: "%{count}분마다"
+      hours:
+        one: 매시간
+        other: "%{count}시간마다"
+    edit:
+      title: 동기화 주기
+      description: 대부분의 제공업체는 하루 한 번 가족 동기화와 함께 연결을 동기화합니다. 하루 중 %{name}만 별도로 동기화할 주기를 선택하세요.
+      interval_label: 동기화 주기
+      no_schedule: 기본 동기화만
+      hint: 자주 동기화하면 제공업체의 요청 한도를 소진할 수 있으며, 일부 제공업체는 요청별 요금을 부과합니다.
+      save: 저장
+    update:
+      updated: 동기화 주기를 저장했습니다.
+      cleared: 동기화 주기를 삭제했습니다. 연결이 기본 동기화로 돌아갔습니다.

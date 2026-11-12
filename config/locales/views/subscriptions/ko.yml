@@ -1,0 +1,24 @@
+---
+ko:
+  subscriptions:
+    self_hosted_alert: "%{product_name}은(는) 자체 호스팅 모드에서 사용할 수 없습니다."
+    upgrade:
+      already_contributing: 이미 후원 중입니다. 감사합니다!
+      page_title: 업그레이드
+      account_settings: 계정 설정
+      sign_out: 로그아웃
+      contribute_and_support_sure: 후원하고 Sure를 지원하기
+      cta: 이 코드베이스의 개발을 계속 후원해 주세요!
+      header:
+        support: 후원
+        sure: Sure
+        today: 오늘
+      redirect_to_stripe: 다음 단계에서 신용카드 처리를 담당하는 Stripe로 이동합니다.
+      trialing: "%{days}일 후 데이터가 삭제됩니다"
+      trial_over: 체험 기간이 종료되었습니다
+    create:
+      welcome: Sure에 오신 것을 환영합니다!
+      trial_already_used: 이미 체험을 시작했거나 완료했습니다. 계속하려면 업그레이드하세요.
+    success:
+      welcome_with_contribution: Sure에 오신 것을 환영합니다! 후원해 주셔서 감사합니다.
+      contribution_failed: 후원 처리 중 문제가 발생했습니다. 다시 시도해 주세요.

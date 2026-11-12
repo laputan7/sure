@@ -1,0 +1,14 @@
+---
+ko:
+  portfolios:
+    empty_state:
+      add_account: 투자 계좌 추가
+      description: 재정 및 보고서에 포함한 증권사, 퇴직연금 및 암호화폐 계좌와 잔액이 여기에 표시됩니다.
+      title: 표시할 투자 계좌가 없습니다
+    sections:
+      accounts: 계좌
+    show:
+      section_aria: "%{title} 섹션. Enter 또는 Space 키를 눌러 재정렬할 항목을 선택한 다음, 화살표 키로 이동하세요."
+      sections_aria: 포트폴리오 섹션
+      subtitle: 보유한 투자 계좌와 각 계좌의 가치입니다.
+      title: 포트폴리오

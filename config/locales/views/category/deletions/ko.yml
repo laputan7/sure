@@ -1,0 +1,13 @@
+---
+ko:
+  category:
+    deletions:
+      create:
+        success: 거래 카테고리를 삭제했습니다
+      new:
+        category: 카테고리
+        delete_and_leave_uncategorized: '"%{category_name}" 삭제 후 미분류로 두기'
+        delete_and_recategorize: '"%{category_name}" 삭제 후 새 카테고리 지정'
+        delete_category: 카테고리를 삭제할까요?
+        explanation: 이 카테고리를 삭제하면 "%{category_name}" 카테고리가 지정된 모든 거래가 미분류 상태가 됩니다. 아래에서 새 카테고리를 지정하여 미분류 상태로 두지 않을 수도 있습니다.
+        replacement_category_prompt: 카테고리 선택
