@@ -1,5 +1,21 @@
 ---
 ko:
+  defaults:
+    brand_name: "%{brand_name}"
+    product_name: "%{product_name}"
+    common:
+      close: 닫기
+  global:
+    expand: 펼치기
+  mcp:
+    errors:
+      invalid_session_id: 유효하지 않은 MCP 세션 ID입니다
+      unsupported_protocol_version: "지원하지 않는 프로토콜 버전입니다: %{version}"
+  oauth:
+    registration:
+      invalid_redirect_uris: "redirect_uris에는 https, loopback http 또는 네이티브 앱 URI 스킴을 사용해야 합니다"
+      invalid_client_name: "client_name에는 양방향 제어 문자를 사용할 수 없습니다"
+      reserved_client_name: "client_name은 자사 앱 전용으로 예약되어 있습니다"
   activerecord:
     errors:
       messages:
@@ -41,7 +57,9 @@ ko:
     formats:
       default: "%Y-%m-%d"
       long: "%Y년 %m월 %d일"
+      month_year: "%Y년 %m월"
       short: "%m월 %d일"
+      short_month_year: "%Y년 %m월"
       short_with_year: "%Y년 %m월 %d일"
     month_names:
     -
@@ -63,19 +81,43 @@ ko:
     - :day
   datetime:
     distance_in_words:
-      about_x_hours: 대략 %{count}시간
-      about_x_months: 대략 %{count}개월
-      about_x_years: 대략 %{count}년
-      almost_x_years: 거의 %{count}년
+      about_x_hours:
+        one: 약 %{count}시간
+        other: 약 %{count}시간
+      about_x_months:
+        one: 약 %{count}개월
+        other: 약 %{count}개월
+      about_x_years:
+        one: 약 %{count}년
+        other: 약 %{count}년
+      almost_x_years:
+        one: 거의 %{count}년
+        other: 거의 %{count}년
       half_a_minute: 30초
-      less_than_x_minutes: "%{count}분 미만"
-      less_than_x_seconds: "%{count}초 미만"
-      over_x_years: "%{count}년 초과"
-      x_days: "%{count}일"
-      x_minutes: "%{count}분"
-      x_months: "%{count}개월"
-      x_seconds: "%{count}초"
-      x_years: "%{count}년"
+      less_than_x_minutes:
+        one: 1분 미만
+        other: "%{count}분 미만"
+      less_than_x_seconds:
+        one: "%{count}초 미만"
+        other: "%{count}초 미만"
+      over_x_years:
+        one: "%{count}년 초과"
+        other: "%{count}년 초과"
+      x_days:
+        one: "%{count}일"
+        other: "%{count}일"
+      x_minutes:
+        one: "%{count}분"
+        other: "%{count}분"
+      x_months:
+        one: "%{count}개월"
+        other: "%{count}개월"
+      x_seconds:
+        one: "%{count}초"
+        other: "%{count}초"
+      x_years:
+        one: "%{count}년"
+        other: "%{count}년"
     prompts:
       day: 일
       hour: 시
@@ -84,43 +126,53 @@ ko:
       second: 초
       year: 년
   errors:
-    format: "%{message}"
+    format: "%{attribute} %{message}"
     messages:
-      accepted: "%{attribute}을(를) 반드시 확인해야 합니다"
-      blank: "%{attribute}에 내용을 입력해 주세요"
-      confirmation: "%{attribute}은(는) 서로 일치해야 합니다"
-      empty: "%{attribute}에 내용을 입력해 주세요"
-      equal_to: "%{attribute}은(는) %{count}와(과) 같아야 합니다"
-      even: "%{attribute}에 짝수를 입력해 주세요"
-      exclusion: "%{attribute}은(는) 이미 예약되어 있는 값입니다"
-      greater_than: "%{attribute}은(는) %{count}보다 커야 합니다"
-      greater_than_or_equal_to: "%{attribute}은(는) %{count}보다 크거나 같아야 합니다"
-      in: "%{attribute}은(는) %{count}범위 안에 있어야 합니다"
-      inclusion: "%{attribute}은(는) 목록에 포함되어 있는 값이 아닙니다"
-      invalid: "%{attribute}은(는) 올바르지 않은 값입니다"
-      less_than: "%{attribute}은(는) %{count}보다 작아야 합니다"
-      less_than_or_equal_to: "%{attribute}은(는) %{count}와(과) 작거나 같아야 합니다"
-      model_invalid: "%{attribute}에 대한 데이터 검증에 실패하였습니다: %{errors}"
-      not_a_number: "%{attribute}에 숫자를 입력해 주세요"
-      not_an_integer: "%{attribute}에 정수를 입력해 주세요"
-      odd: "%{attribute}에 홀수를 입력해 주세요"
-      other_than: "%{attribute}은(는) %{count}와(과) 달라야 합니다"
-      present: "%{attribute}은(는) 비어있어야 합니다"
-      required: "%{attribute}은(는) 반드시 있어야 합니다"
-      taken: "%{attribute}은(는) 이미 존재합니다"
-      too_long: "%{attribute}은(는) %{count}자를 넘을 수 없습니다"
-      too_short: "%{attribute}은(는) 적어도 %{count}자를 넘어야 합니다"
-      wrong_length: "%{attribute}은(는) %{count}자여야 합니다"
+      accepted: 수락해야 합니다
+      blank: 비워둘 수 없습니다
+      confirmation: "확인값이 %{attribute}과(와) 일치하지 않습니다"
+      empty: 비워둘 수 없습니다
+      equal_to: "%{count}와(과) 같아야 합니다"
+      even: 짝수여야 합니다
+      exclusion: 사용할 수 없는 값입니다
+      greater_than: "%{count}보다 커야 합니다"
+      greater_than_or_equal_to: "%{count}보다 크거나 같아야 합니다"
+      in: "%{count} 범위에 포함되어야 합니다"
+      inclusion: 목록에 포함되지 않은 값입니다
+      invalid: 유효하지 않은 값입니다
+      less_than: "%{count}보다 작아야 합니다"
+      less_than_or_equal_to: "%{count}보다 작거나 같아야 합니다"
+      model_invalid: "데이터 검증에 실패했습니다: %{errors}"
+      not_a_number: 숫자여야 합니다
+      not_an_integer: 정수여야 합니다
+      odd: 홀수여야 합니다
+      other_than: "%{count}와(과) 달라야 합니다"
+      present: 비워 두어야 합니다
+      required: 필수 항목입니다
+      taken: 이미 사용 중인 값입니다
+      too_long:
+        one: "최대 %{count}자까지 입력할 수 있습니다"
+        other: "최대 %{count}자까지 입력할 수 있습니다"
+      too_short:
+        one: "최소 %{count}자 이상 입력해야 합니다"
+        other: "최소 %{count}자 이상 입력해야 합니다"
+      wrong_length:
+        one: "%{count}자여야 합니다"
+        other: "%{count}자여야 합니다"
     template:
-      body: 아래 문제를 확인해 주세요.
-      header: "%{count}개의 오류로 인해 %{model}을(를) 저장할 수 없습니다"
+      body: 아래 항목을 확인해 주세요.
+      header:
+        one: "%{count}개의 오류로 인해 %{model}을(를) 저장할 수 없습니다"
+        other: "%{count}개의 오류로 인해 %{model}을(를) 저장할 수 없습니다"
   helpers:
     select:
-      prompt: 선택해주세요
+      prompt: 선택해 주세요
+      search_placeholder: 검색
+      default_label: 선택...
     submit:
-      create: 등록
-      submit: 제출
-      update: 수정
+      create: "%{model} 생성"
+      submit: "%{model} 저장"
+      update: "%{model} 수정"
   number:
     currency:
       format:
@@ -143,10 +195,14 @@ ko:
         format: "%n%u"
         units:
           billion: 십억
-          million: 백만
+          million:
+            one: 백만
+            other: 백만
           quadrillion: 천조
           thousand: 천
-          trillion: 조
+          trillion:
+            one: 조
+            other: 조
           unit: ''
       format:
         delimiter: ''
@@ -156,7 +212,9 @@ ko:
       storage_units:
         format: "%n%u"
         units:
-          byte: 바이트
+          byte:
+            one: 바이트
+            other: 바이트
           eb: EB
           gb: GB
           kb: KB

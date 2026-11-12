@@ -306,6 +306,10 @@ class MoneyTest < ActiveSupport::TestCase
     end
   end
 
+  test "formats South Korean won using Korean currency conventions" do
+    assert_equal "₩1,234", Money.new(1234, :krw).format(locale: :ko)
+  end
+
   test "converts currency when rate available" do
     ExchangeRate.expects(:find_or_fetch_rate).returns(OpenStruct.new(rate: 1.2))
 

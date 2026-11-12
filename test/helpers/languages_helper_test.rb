@@ -13,6 +13,10 @@ class LanguagesHelperTest < ActionView::TestCase
     LanguagesHelper.instance_variable_set(:@timezone_option_rows, nil)
   end
 
+  test "Korean dates use the local year-month-day format" do
+    assert_equal "2026년 11월 13일", I18n.l(Date.new(2026, 11, 13), format: :long, locale: :ko)
+  end
+
   test "timezone options have unique values so the saved zone stays selected" do
     values = timezone_options.map(&:last)
 
