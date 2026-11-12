@@ -1,0 +1,125 @@
+---
+ko:
+  loans:
+    edit:
+      edit: "%{account} 수정"
+    form:
+      interest_rate: 이자율
+      interest_rate_placeholder: '5.25'
+      initial_balance: 대출 원금
+      day_count_convention: 이자 계산 기준
+      day_count_convention_actual_365: 실제 일수/365
+      day_count_convention_actual_actual: 실제 일수/실제 연간 일수
+      day_count_convention_hint: 대출 기관이 각 기간을 1년 기준으로 계산하는 방식입니다. Actual/365는 월의 실제 일수에 따라 계산하며 영국과 호주 모기지에서 표준적으로 사용됩니다. 30/360은 매월을 1년의 12분의 1로 계산하며 Sure가 지금까지 사용해 온 기준입니다.
+      day_count_convention_thirty_360: 30/360 (매월 12분의 1로 계산)
+      rate_type: 금리 유형
+      term_months: 대출 기간(개월)
+      term_months_placeholder: '360'
+      none: 없음
+      subtype_prompt: 대출 유형 선택
+      subtype_none: 없음
+      rate_type_adjustable: 조정형
+      rate_type_fixed: 고정형
+      rate_type_variable: 변동형
+      rate_changes: 금리 변경
+      rate_changes_hint: 각 행은 적용 시작일부터 다음 변경일까지 적용되는 금리를 설정합니다. 같은 날짜를 다시 입력하면 기존 행이 교체되며 중복 행은 추가되지 않습니다.
+      rate_changes_empty: 기록된 금리 변경이 없습니다. 대출에는 위의 금리가 적용됩니다.
+      rate_change_effective_date: 적용일
+      rate_change_rate: 금리
+      rate_change_add: 금리 변경 추가
+      rate_change_remove: 삭제
+      start_date: 대출 실행일
+      start_date_hint: 대출금이 지급된 날짜입니다. 신규 대출의 잔액 내역은 최초 잔액 날짜가 아니라 이 날짜부터 시작합니다. 비워 두면 최초 잔액 날짜를 사용합니다.
+      down_payment: 계약금
+      insurance_rate: 보험료율
+      insurance_rate_placeholder: '0.36'
+      insurance_rate_hint: 상환금과 함께 매월 청구되는 연간 요율입니다. 정액형은 최초 잔액을 기준으로, 체감형은 남은 대출 잔액을 기준으로 청구됩니다.
+      insurance_rate_type: 보험 유형
+      insurance_rate_type_decreasing_life: 체감형
+      insurance_rate_type_level_term: 정액형
+    new:
+      title: 대출 정보 입력
+    overview:
+      interest_rate: 이자율
+      monthly_payment: 월 상환액
+      not_applicable: 해당 없음
+      original_payoff_date: 최초 상환 완료일
+      original_principal: 최초 대출 금액
+      remaining_principal: 남은 대출 금액
+      term: 기간
+      type: 유형
+      unknown: 알 수 없음
+    tabs:
+      extra_repayments:
+        amount_label: 추가 상환액
+        amount_placeholder: "0.00"
+        apply: 적용
+        baseline_not_cleared: 현재 상환액으로는 원래 만기까지 대출을 상환하지 못하며 %{balloon}의 잔액이 남게 되므로, 비교할 더 이른 상환일이나 이자 절감액이 없습니다. 이 추가 상환을 적용하면 위 날짜에 상환이 완료됩니다.
+        clear: 지우기
+        comparison_basis: 오늘 잔액을 기준으로, 현재 상환액만 납부하고 추가 상환은 하지 않는 경우와 비교합니다.
+        dated_note: 주간 및 격주 추가 상환은 납부 후 다음 상환 시점에 반영되므로, 표시된 이자 절감액은 실제보다 적게 계산될 수 있습니다.
+        extra_not_cleared: 이 추가 상환을 적용해도 원래 만기까지 대출을 상환하지 못합니다. 금액을 늘려 보세요.
+        frequencies:
+          fortnightly: 격주
+          monthly: 매월
+          weekly: 매주
+        frequency_label: 빈도
+        interest_saved: 절감 이자
+        intro: 상환액에 매주, 격주 또는 매월 추가 금액을 납부하면 대출을 얼마나 빨리 갚고 이자를 얼마나 절약할 수 있는지 확인하세요.
+        invalid_amount: 0 이상의 금액을 숫자로 입력하세요.
+        invalid_frequency: 매주, 격주 또는 매월 중에서 선택하세요.
+        months_sooner:
+          zero: 같은 달에 상환 완료
+          one: "%{count}개월 일찍 상환"
+          other: "%{count}개월 일찍 상환"
+        no_scheduled_repayments: 이 대출에는 예정된 상환이 남아 있지 않지만 잔액은 남아 있어 추가 상환을 더할 상환 일정이 없습니다.
+        not_applicable: 이 대출은 더 이상 상환할 금액이 없어 추가 상환을 계산할 수 없습니다.
+        payoff_with_extra: 추가 상환 적용 시 상환 완료일
+        total_cost: 오늘부터의 총비용
+        total_cost_not_cleared: 원래 만기까지 상환되지 않음
+        total_cost_saved: 추가 상환이 없을 때보다 %{amount} 절감
+        variable_rate_notice: 이 대출의 금리는 시간에 따라 변동합니다. 이 수치는 이미 기록된 금리 변경을 적용하며, 아직 기록되지 않은 변경은 결과에 영향을 줍니다.
+      repayment_progress:
+        instalment: "%{number}회차 납부 · %{date}"
+        insurance: 보험료
+        interest: 이자
+        of_original: "%{amount} 중"
+        principal: 원금
+        repaid: 상환액
+        total: 합계
+      schedule:
+        date: 날짜
+        description: 최초 잔액, 금리 및 기간을 기준으로 %{start_date}부터 예상한 일정입니다. 추가 상환은 반영되지 않습니다.
+        variable_rate_notice: 이 대출의 금리는 시간에 따라 변동합니다. 일정은 기록된 변경 시점마다 원래 상환 완료일을 유지하도록 상환액을 다시 계산합니다. 아직 기록되지 않은 변경은 수치에 영향을 줍니다.
+        opening_payment: 최초 상환액
+        forecasted_payoff_date: 예상 상환 완료일
+        forecasted_payoff_not_converged: 현재 상환액으로는 상환되지 않음
+        interest: 이자
+        monthly_payment: 월 상환액
+        not_applicable: 해당 없음
+        number: "#"
+        payment: 상환액
+        principal: 원금
+        remaining_balance: 남은 잔액
+        total_cost: 총비용
+        total_interest: 총이자
+      overview:
+        insurance_rate_only: 연 %{rate}
+        interest_rate: 이자율
+        leverage: 레버리지
+        leverage_band_conservative: 보수적
+        leverage_band_high: 높음
+        leverage_band_moderate: 보통
+        leverage_multiple: "%{ratio}배"
+        monthly_payment: 월 상환액
+        not_applicable: 해당 없음
+        original_payoff_date: 최초 상환 완료일
+        original_principal: 최초 대출 금액
+        remaining_principal: 남은 대출 금액
+        total_cost: 총비용
+        total_cost_with_insurance: 보험료 포함 총비용
+        total_insurance: 보험료
+        term: 기간
+        type: 유형
+        unknown: 알 수 없음
+        edit_loan_details: 대출 정보 수정
