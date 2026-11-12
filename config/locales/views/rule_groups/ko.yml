@@ -1,0 +1,23 @@
+---
+ko:
+  rule_groups:
+    new:
+      title: 새 규칙 그룹
+    edit:
+      title: '그룹 "%{name}" 이름 변경'
+    form:
+      name_label: 이름
+      name_placeholder: '예: 식료품'
+      hint: 그룹은 규칙 목록을 정리할 뿐입니다. 규칙은 계속 위에서 아래 순서로 실행됩니다.
+    create:
+      success: 그룹을 만들었습니다
+    update:
+      success: 그룹 이름을 변경했습니다
+    destroy:
+      success: 그룹을 삭제했습니다. 규칙은 그룹 없이 그대로 유지됩니다.
+    activation:
+      activated: '"%{name}" 그룹의 모든 규칙이 켜졌습니다'
+      deactivated: '"%{name}" 그룹의 모든 규칙이 꺼졌습니다'
+      partially_switched:
+        one: 규칙 1개를 전환하지 못했습니다. 이유를 확인하려면 규칙을 여세요.
+        other: '규칙 %{count}개를 전환하지 못했습니다. 이유를 확인하려면 규칙을 여세요.'

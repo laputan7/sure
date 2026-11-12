@@ -1,0 +1,135 @@
+---
+ko:
+  properties:
+    edit:
+      edit: "%{account} 수정"
+      title: 부동산 직접 입력
+    form:
+      address_line1: 도로명 주소
+      address_line1_placeholder: 123 Main St
+      area: 전용 면적
+      area_placeholder: '2000'
+      area_unit: 측정 단위
+      country: 국가
+      country_placeholder: US
+      locality: 도시
+      locality_placeholder: San Francisco
+      none: 없음
+      postal_code: 우편번호
+      postal_code_placeholder: '94105'
+      region: 주/도
+      region_placeholder: CA
+      subtype_prompt: 부동산 유형 선택
+      year_built: 준공 연도
+      year_built_placeholder: '2000'
+    avm_providers:
+      rentcast: RentCast
+      realie: Realie
+      chimnie: Chimnie
+    new:
+      title: 부동산 직접 입력
+      next: 다음
+      avm_option: "%{provider}로 추가"
+      avm_title: "%{provider}를 통해 부동산 추가"
+      avm_description: "부동산 이름과 주소를 입력하세요. %{provider}가 부동산 정보와 예상 시가를 조회합니다."
+      avm_us_only: "%{provider}는 미국에 있는 부동산만 지원합니다."
+      avm_uk_only: "%{provider}는 영국에 있는 주거용 부동산만 지원합니다."
+      avm_uprn_label: UPRN
+      avm_uprn_placeholder: "100023336956"
+      avm_uprn_help: "고유 부동산 참조 번호(최대 12자리)는 영국의 모든 주소를 식별합니다. GeoPlace의 findmyaddress.co.uk에서 확인하거나 지방 의회에 문의하세요. %{provider}는 이 번호를 사용해 무료로 부동산 가치를 산정합니다."
+      avm_county_label: 카운티(선택 사항)
+      avm_town_label: 읍/도시
+      avm_postcode_label: 우편번호
+      avm_submit: 부동산 조회
+      avm_preview_title: 부동산 정보 확인
+      avm_preview_description: "%{provider}가 찾은 정보입니다. 부동산을 추가하기 전에 검토하세요. 아직 아무것도 생성되지 않았습니다."
+      avm_preview_no_record: "%{provider}에서 이 주소의 부동산 기록을 찾지 못해 주변 지역을 바탕으로 추정한 가치를 표시했습니다. 계속하기 전에 주소를 다시 확인하세요."
+      avm_preview_back: 뒤로
+      avm_preview_uprn: UPRN
+      avm_preview_range: 추정 범위
+      avm_preview_confidence: 신뢰도
+      avm_confidence:
+        high: 높음
+        medium: 보통
+        low: 낮음
+      avm_attribution_chimnie: "Chimnie의 평가 데이터입니다. Open Government Licence v3.0에 따라 사용 허가된 OS 데이터 © Crown copyright and database right, Royal Mail 데이터 © Royal Mail copyright and database right, HM Land Registry 데이터 © Crown copyright and database right를 포함합니다."
+      avm_preview_confirm: 부동산 추가
+    address:
+      title: 부동산 직접 입력
+      address_line1_label: 주소 1
+      address_line1_placeholder: 123 Main Street
+      city_label: 도시
+      city_placeholder: San Francisco
+      state_region_label: 주/지역
+      state_region_placeholder: CA
+      postal_code_label: 우편번호
+      postal_code_placeholder: '12345'
+      country_label: 국가
+      country_placeholder: USA
+      save: 저장
+    balances:
+      title: 부동산 직접 입력
+      market_value_label: 예상 시가
+      market_value_tooltip: 부동산의 예상 시가입니다. Zillow 또는 Redfin 같은 사이트에서 확인할 수 있으며 정확한 금액은 아닙니다.
+      save: 저장
+      next: 다음
+    overview_fields:
+      name_label: 이름
+      name_placeholder: 별장
+      subtype_prompt: 유형 선택
+      property_type_label: 부동산 유형
+      year_built_label: 준공 연도(선택 사항)
+      year_built_placeholder: '1990'
+      area_label: 면적(선택 사항)
+      area_placeholder: '1200'
+      square_feet: 제곱피트
+      square_meters: 제곱미터
+      area_unit_label: 면적 단위
+    overview:
+      living_area: 전용 면적
+      market_value: 시가
+      purchase_price: 매입 가격
+      trend: 추이
+      unknown: 알 수 없음
+      year_built: 준공 연도
+    tabs:
+      overview:
+        living_area: 전용 면적
+        market_value: 시가
+        purchase_price: 매입 가격
+        trend: 추이
+        unknown: 알 수 없음
+        year_built: 준공 연도
+        edit_account_details: 계좌 정보 수정
+        refresh_valuation: 가치 재산정
+        valuation_source: "%{provider} 평가, 최근 업데이트 %{date}"
+        link_valuation: "%{provider}로 가치 자동 업데이트"
+        link_valuation_description: 이 부동산의 가치는 수동으로만 업데이트됩니다.
+    refresh_valuation:
+      queued: 가치 재산정이 시작되었습니다. 새 값이 곧 표시됩니다.
+      not_linked: 이 부동산은 평가 제공업체에 연결되어 있지 않습니다.
+      not_configured: "%{provider}가 설정되지 않았습니다. 이 가치를 다시 산정하려면 설정 → 셀프 호스팅에서 API 키를 추가하세요."
+    link_valuation:
+      linked: "%{provider}에 연결하여 부동산 가치를 업데이트했습니다."
+      link_failed: "%{provider}에서 이 부동산의 가치를 산정하지 못해 연결되지 않았습니다. 주소가 정확한지 확인한 후 다시 시도하세요."
+      not_linkable: 이 부동산은 해당 제공업체에 연결할 수 없습니다. 주소가 완전하고 지원 국가에 있는지, 계좌 통화가 제공업체와 일치하는지 확인하세요.
+    subtypes:
+      apartment:
+        short: 아파트
+        long: 아파트
+      plot:
+        short: 대지
+        long: 대지/토지
+      commercial:
+        short: 상업용
+        long: 상업용 부동산
+      rented:
+        short: 임대
+        long: 임대 부동산
+      agri_land:
+        short: 농지
+        long: 농지
+    form_tabs:
+      address: 주소
+      overview: 개요
+      value: 가치
