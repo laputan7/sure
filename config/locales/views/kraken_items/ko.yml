@@ -1,0 +1,85 @@
+---
+ko:
+  kraken_items:
+    provider_connection:
+      default_name: Kraken
+      default_description: Kraken 거래소 계좌에 연결
+      name: "Kraken - %{name}"
+      description: "%{name}에 연결"
+    create:
+      default_name: Kraken
+      success: Kraken에 성공적으로 연결했습니다. 거래소 계좌를 동기화하고 있습니다.
+    update:
+      success: Kraken 연결을 성공적으로 업데이트했습니다.
+    destroy:
+      success: Kraken 연결 삭제를 예약했습니다.
+    select_accounts:
+      select_connection: 제공자 설정에서 Kraken 연결을 선택하세요.
+      no_credentials_configured: 계좌를 설정하기 전에 Kraken API 인증 정보를 추가하세요.
+    link_accounts:
+      select_connection: 계좌를 연결하기 전에 Kraken 연결을 선택하세요.
+    select_existing_account:
+      title: Kraken 계좌 연결
+      no_accounts_found: Kraken 계좌를 찾을 수 없습니다.
+      wait_for_sync: Kraken 동기화가 완료될 때까지 기다리세요.
+      check_provider_health: Kraken API 인증 정보가 유효한지 확인하세요.
+      link: 연결
+      cancel: 취소
+    link_existing_account:
+      success: Kraken 계좌에 성공적으로 연결했습니다
+      select_connection: 계좌를 연결하기 전에 Kraken 연결을 선택하세요.
+      errors:
+        only_manual: 기존 제공자 연결이 없는 수동 암호화폐 거래소 계좌만 Kraken에 연결할 수 있습니다
+        invalid_kraken_account: 유효하지 않은 Kraken 계좌
+        kraken_account_already_linked: 이 Kraken 계좌는 이미 연결되어 있습니다
+    setup_accounts:
+      title: Kraken 계좌 가져오기
+      subtitle: 추적할 거래소 계좌를 선택하세요
+      instructions: 이 연결에서는 보유 자산과 현물 거래 체결 내역만 포함된 통합 암호화폐 거래소 계좌 하나를 Kraken에서 가져옵니다.
+      no_accounts: 모든 Kraken 계좌를 가져왔습니다.
+      accounts_count:
+        one: "사용 가능한 계좌 %{count}개"
+        other: "사용 가능한 계좌 %{count}개"
+      select_all: 모두 선택
+      import_selected: 선택 항목 가져오기
+      cancel: 취소
+      creating: 가져오는 중...
+    complete_account_setup:
+      success:
+        one: "계좌 %{count}개를 가져왔습니다"
+        other: "계좌 %{count}개를 가져왔습니다"
+      none_selected: 선택한 계좌가 없습니다
+      no_accounts: 가져올 계좌가 없습니다
+    kraken_item:
+      provider_name: Kraken
+      syncing: 동기화 중...
+      reconnect: 인증 정보를 업데이트해야 합니다
+      deletion_in_progress: 삭제 중...
+      sync_status:
+        no_accounts: 계좌를 찾을 수 없습니다
+        all_synced:
+          one: "계좌 %{count}개 동기화 완료"
+          other: "계좌 %{count}개 동기화 완료"
+        partial_sync: "%{linked_count}개 동기화 완료, %{unlinked_count}개 설정 필요"
+      status: "%{timestamp} 전에 마지막으로 동기화됨"
+      status_with_summary: "%{timestamp} 전에 마지막으로 동기화됨 - %{summary}"
+      status_never: 동기화한 적 없음
+      delete: 삭제
+      no_accounts_title: 계좌를 찾을 수 없습니다
+      no_accounts_message: 동기화 후 여기에 Kraken 거래소 계좌가 표시됩니다.
+      setup_needed: 계좌를 가져올 준비가 되었습니다
+      setup_description: 이 Kraken 연결을 암호화폐 거래소 계좌로 가져오세요.
+      setup_action: 계좌 가져오기
+      import_accounts_menu: 계좌 가져오기
+      stale_rate_warning: "%{date}의 정확한 환율을 사용할 수 없어 잔액은 추정치입니다. 다음 동기화 때 업데이트됩니다."
+  kraken_item:
+    syncer:
+      checking_credentials: 인증 정보 확인 중...
+      credentials_invalid: Kraken API 인증 정보가 유효하지 않습니다. API 키와 비밀 키를 확인하세요.
+      importing_accounts: Kraken에서 계좌를 가져오는 중...
+      checking_configuration: 계좌 설정 확인 중...
+      accounts_need_setup:
+        one: "계좌 %{count}개 설정 필요"
+        other: "계좌 %{count}개 설정 필요"
+      processing_accounts: 계좌 데이터 처리 중...
+      calculating_balances: 잔액 계산 중...

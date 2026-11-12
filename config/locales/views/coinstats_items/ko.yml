@@ -1,0 +1,74 @@
+ko:
+  coinstats_items:
+    create:
+      success: CoinStats 제공업체 연결이 성공적으로 설정되었습니다.
+      default_name: CoinStats 연결
+      errors:
+        validation_failed: '유효성 검사에 실패했습니다: %{message}.'
+    update:
+      success: CoinStats 제공업체 연결이 업데이트되었습니다.
+      errors:
+        validation_failed: '유효성 검사에 실패했습니다: %{message}.'
+    destroy:
+      success: CoinStats 제공업체 연결 삭제가 예약되었습니다.
+    link_wallet:
+      success: '%{count}개의 암호화폐 지갑을 연결했습니다.'
+      missing_params: '필수 매개변수가 없습니다: address 및 blockchain.'
+      failed: 암호화폐 지갑 연결에 실패했습니다.
+      error: '암호화폐 지갑 연결에 실패했습니다: %{message}.'
+    link_exchange:
+      success: '%{name} 거래소를 연결했습니다.'
+      missing_params: 거래소와 인증 정보가 필요합니다.
+      invalid_exchange: 선택한 거래소는 더 이상 지원되지 않습니다.
+      failed: 거래소 연결에 실패했습니다.
+      error: '거래소 연결에 실패했습니다: %{message}.'
+    new:
+      title: CoinStats로 암호화폐 연결
+      blockchain_fetch_error: 블록체인을 불러오지 못했습니다. 나중에 다시 시도해 주세요.
+      link_wallet_title: 지갑 주소 연결
+      link_wallet_description: CoinStats를 통해 개인 보관 지갑 또는 단일 온체인 주소를 추적합니다.
+      address_label: 주소
+      address_placeholder: 필수
+      blockchain_label: 블록체인
+      blockchain_placeholder: 필수
+      blockchain_select_blank: 블록체인 선택
+      link_wallet_submit: 암호화폐 지갑 연결
+      link_exchange_title: 거래소 API 연결
+      link_exchange_description: 읽기 전용 거래소 API 키를 사용하면 CoinStats가 Bitvavo, Binance 및 기타 지원 거래소의 잔액과 거래를 동기화할 수 있습니다.
+      link_exchange_note: 거래소에서 API 키 활성화나 이메일 확인이 필요한 경우, 여기서 연결하기 전에 해당 절차를 완료하세요.
+      exchange_select_blank: 거래소 선택
+      exchange_label: 거래소
+      link_exchange_submit: 거래소 연결
+      not_configured_title: CoinStats 제공업체 연결이 구성되지 않았습니다
+      not_configured_message: 암호화폐 지갑이나 거래소를 연결하려면 먼저 CoinStats 제공업체 연결을 구성해야 합니다.
+      not_configured_step1_html: <strong>설정 → 제공업체</strong>로 이동하세요
+      not_configured_step2_html: <strong>CoinStats</strong> 제공업체를 찾으세요
+      not_configured_step3_html: 제공된 <strong>설정 안내</strong>에 따라 제공업체 구성을 완료하세요
+      go_to_settings: 제공업체 설정으로 이동
+      setup_instructions: '설정 안내:'
+      step1_html: <a href="https://openapi.coinstats.app/" class="link" target="_blank" rel="noopener noreferrer">CoinStats Public API Dashboard</a>에서 API 키를 발급받으세요.
+      step2: 아래에 API 키를 입력하고 구성을 클릭하세요.
+      step3_html: 연결이 완료되면 <a href="%{accounts_url}" class="link" data-turbo-frame="_top">계좌</a> 탭으로 이동해 암호화폐 계좌를 설정하세요.
+      api_key_label: API 키
+      api_key_placeholder: 필수
+      configure: 구성
+      update_configuration: 다시 구성
+      default_name: CoinStats 연결
+    coinstats_item:
+      deletion_in_progress: 암호화폐 지갑 데이터를 삭제하고 있습니다…
+      provider_name: CoinStats
+      syncing: 동기화 중…
+      sync_status:
+        no_accounts: 암호화폐 지갑을 찾을 수 없습니다
+        all_synced:
+          one: 암호화폐 지갑 %{count}개를 동기화했습니다
+          other: 암호화폐 지갑 %{count}개를 동기화했습니다
+        partial_sync: 암호화폐 지갑 %{linked_count}개를 동기화했고, %{unlinked_count}개는 설정이 필요합니다
+      reconnect: 다시 연결
+      status: '%{timestamp} 전에 마지막으로 동기화됨'
+      status_never: 동기화한 적 없음
+      status_with_summary: '%{timestamp} 전에 마지막으로 동기화됨 • %{summary}'
+      update_api_key: API 키 업데이트
+      delete: 삭제
+      no_wallets_title: 연결된 암호화폐 지갑이 없습니다
+      no_wallets_message: 현재 CoinStats에 연결된 암호화폐 지갑이 없습니다.
