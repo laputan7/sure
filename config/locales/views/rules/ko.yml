@@ -1,0 +1,216 @@
+ko:
+  rules:
+    no_action: 동작 없음
+    no_condition: 조건 없음
+    notification_baseline_timed_out: 이 규칙은 아직 꺼져 있습니다. 이미 일치하는 거래를 확인하는 데 시간이 너무 오래 걸렸으며, 확인 없이 켜면 해당 거래 모두에 이메일을 보내게 됩니다. 조건을 간소화한 다음 다시 켜세요.
+    category_rule_cta:
+      close: 닫기
+      create_rule: 규칙 만들기
+      description: "비슷한 거래를 항상 분류할까요?"
+      not_today: "오늘은 안 함"
+      turn_off_suggestions: "규칙 제안 끄기"
+      message: "%{category_name}(으)로 업데이트됨"
+    classifier_rules:
+      category_classifier: 카테고리 분류기
+      merchant_matcher: 가맹점 일치기
+    filters:
+      search_label: 규칙 검색
+      search_placeholder: 이름, 조건 및 동작 검색
+      reset: 초기화
+      button: 필터
+      done: 완료
+      active_label: 활성 필터
+      remove: "%{filter} 필터 제거"
+      status:
+        label: 상태
+        all: 모든 상태
+        active: 활성
+        inactive: 비활성
+      action_type:
+        label: 동작
+        all: 모든 동작
+      condition_type:
+        label: 조건
+        all: 모든 조건
+      account:
+        label: 계좌
+        all: 모든 계좌
+      group:
+        label: 그룹
+        all: 모든 그룹
+        none: 그룹 없음
+    group:
+      rules_count:
+        one: 규칙 1개
+        other: "규칙 %{count}개"
+      inactive_count:
+        one: 비활성 1개
+        other: "비활성 %{count}개"
+      empty: 아직 이 그룹에 규칙이 없습니다. 규칙 양식에서 그룹을 선택하세요.
+      activate_all: 모든 규칙 켜기
+      deactivate_all: 모든 규칙 끄기
+      rename: 이름 바꾸기
+      delete: 그룹 삭제
+      delete_confirm_title: "그룹 ‘%{name}’을(를) 삭제할까요?"
+      delete_confirm_body: 규칙은 그룹 없이 그대로 남습니다. 삭제되는 규칙은 없습니다.
+    rule:
+      edit: 수정
+      re_apply_rule: 규칙 다시 적용
+      delete: 삭제
+      then: THEN
+      and_more_conditions:
+        one: 조건 1개 추가
+        other: "조건 %{count}개 추가"
+      and_more_actions:
+        one: 동작 1개 추가
+        other: "동작 %{count}개 추가"
+      action_label_to: "%{label}을(를) %{value}(으)로"
+      all_past_and_future: 과거 및 향후 모든 %{resource}
+      on_or_after: "%{date} 이후의 %{resource}"
+      stop_processing: 중지
+      stop_processing_hint: 아래 규칙은 이 규칙과 일치하는 거래를 변경하지 않습니다.
+    form:
+      rule_name_label: 규칙 이름(선택 사항)
+      rule_name_placeholder: 규칙 이름 입력
+      add_condition: 조건 추가
+      add_condition_group: 조건 그룹 추가
+      add_action: 동작 추가
+      all_past_and_future: 과거 및 향후 모든 %{resource}
+      starting_from: 시작일
+      then: THEN
+      stop_processing_label: 이후 규칙 처리 중지
+      stop_processing_description: 목록 아래쪽의 규칙은 이 규칙과 일치하는 거래를 변경하지 않습니다.
+      group_label: 그룹(선택 사항)
+      group_select_label: 그룹
+      no_group: 그룹 없음
+      new_group_label: 또는 새 그룹
+      new_group_placeholder: 새 그룹 이름
+      group_hint: 그룹은 목록을 정리할 뿐입니다. 그룹 안의 규칙은 목록에서 그룹이 있는 위치에서 실행됩니다.
+    index:
+      page_title: 규칙
+      delete_all_rules: 모든 규칙 삭제
+      new_rule: 새 규칙
+      ai_cost_warning: AI 사용 규칙 동작에는 비용이 발생합니다. 불필요한 비용을 피하려면 가능한 한 조건을 구체적으로 설정하세요.
+      rules_heading: 규칙
+      order_hint: 규칙은 위에서 아래로 실행되며 그룹 안의 규칙도 포함됩니다. 규칙이 거래의 필드를 설정하면 아래 규칙은 해당 필드를 변경하지 않습니다. 일치하는 모든 규칙이 태그를 추가합니다. 규칙과 그룹을 끌어 순서를 바꾸세요.
+      new_group: 새 그룹
+      reorder_group: "%{name} 그룹 이동. Enter 또는 Space를 눌러 잡은 다음 화살표 키로 이동하세요."
+      filters:
+        no_matches: 검색어나 필터와 일치하는 규칙이 없습니다.
+        drag_disabled: 검색 또는 필터가 활성화되어 있으면 정렬할 수 없습니다. 순서를 바꾸려면 초기화하세요.
+      fold_rule: "%{name} 규칙 접기 또는 펼치기"
+      reorder_rule: "%{name} 규칙 이동. Enter 또는 Space를 눌러 잡은 다음 화살표 키로 이동하세요."
+      no_rules_title: 아직 규칙이 없습니다
+      no_rules_description: 규칙을 설정하면 계좌를 동기화할 때마다 거래와 기타 데이터에 동작을 수행할 수 있습니다.
+    confirm:
+      title: 변경 사항 확인
+      title_with_name: "‘%{name}’ 변경 사항 확인"
+      apply_notice_html: "지정한 규칙 조건에 맞는 <span class=\"text-primary font-medium\">%{count} %{resource}</span>에 이 규칙을 적용하려고 합니다. 계속하려면 확인하세요."
+      rules_above_notice:
+        one: 위의 활성 규칙이 먼저 실행되므로 전체 실행과 결과가 같습니다.
+        other: "위의 활성 규칙 %{count}개가 먼저 실행되므로 전체 실행과 결과가 같습니다."
+      ai_cost_title: AI 비용 추정
+      ai_cost_with_estimate_html: "AI를 사용해 거래 %{count}건을 분류합니다. 예상 비용: <span class=\"font-semibold\">~$%{cost}</span>"
+      ai_cost_no_estimate_html: "AI를 사용해 거래 %{count}건을 분류합니다."
+      cost_unavailable_model: "‘%{model}’ 모델의 비용을 추정할 수 없습니다."
+      cost_unavailable_no_provider: 비용을 추정할 수 없습니다(LLM 제공자가 설정되지 않음).
+      cost_warning: 비용이 발생할 수 있습니다. 최신 가격은 모델 제공자에게 확인하세요.
+      view_usage_history: 사용 내역 보기
+      confirm_changes: 변경 사항 확인
+    actions:
+      to_label: 변경 값
+      value_placeholder: 값 입력
+      split:
+        type_fixed: 고정 금액
+        type_percentage: 백분율
+        type_label: 분할 유형
+        add_split: 분할 추가
+        name_placeholder: 분할 이름
+        share_label: 분할 금액 또는 백분율
+        category_label: 분할 카테고리
+        merchant_label: 분할 가맹점
+        tags_label: "분할 태그"
+        remove_split: "분할 제거"
+        hint: "고정 분할은 정확한 금액으로 먼저 차감됩니다. 그런 다음 백분율 분할이 남은 금액을 나눕니다. 여기의 모든 분할이 고정 금액이라면 정확한 거래 금액과 일치하는 조건(예: 금액 = 42.00)도 추가하세요. 일치하는 거래마다 고정 금액의 합계가 거래 총액과 같아야 합니다. 분할 규칙에는 다른 동작을 추가할 수 없습니다."
+        fixed_summary_label: 고정
+        summary:
+          one: "%{count}개 분할"
+          other: "%{count}개 분할"
+    update:
+      success: 규칙이 업데이트되었습니다
+    destroy:
+      success: 규칙이 삭제되었습니다
+    destroy_all:
+      success: 모든 규칙이 삭제되었습니다
+    apply_all:
+      button: 모두 적용
+      confirm_title: 모든 규칙 적용
+      confirm_message: "거래 %{transactions}건에 영향을 주는 규칙 %{count}개를 적용하려고 합니다. 계속하려면 확인하세요."
+      confirm_button: 확인 후 모두 적용
+      success: 모든 규칙이 실행 대기열에 추가되었습니다
+      ai_cost_title: AI 비용 추정
+      ai_cost_message: AI를 사용해 거래를 최대 %{transactions}건 분류합니다.
+      estimated_cost: "예상 비용: ~$%{cost}"
+      cost_unavailable_model: "‘%{model}’ 모델의 비용을 추정할 수 없습니다."
+      cost_unavailable_no_provider: 비용을 추정할 수 없습니다(LLM 제공자가 설정되지 않음).
+      cost_warning: 비용이 발생할 수 있습니다. 최신 가격은 모델 제공자에게 확인하세요.
+      view_usage: 사용 내역 보기
+    recent_runs:
+      title: 최근 실행
+      description: 성공/실패 상태와 거래 수를 포함한 규칙 실행 기록을 확인하세요.
+      unnamed_rule: 이름 없는 규칙
+      columns:
+        date_time: 날짜/시간
+        execution_type: 유형
+        status: 상태
+        rule_name: 규칙 이름
+        transactions_counts:
+          queued: 대기 중
+          processed: 처리됨
+          modified: 수정됨
+          blocked: 차단됨
+      execution_types:
+        manual: 수동
+        scheduled: 예약됨
+      statuses:
+        pending: 대기 중
+        success: 성공
+        failed: 실패
+    clear_ai_cache:
+      button: AI 캐시 초기화
+      confirm_title: AI 캐시를 초기화할까요?
+      confirm_body: AI 캐시를 초기화할까요? 그러면 AI 규칙이 모든 거래를 다시 처리합니다. 추가 API 비용이 발생할 수 있습니다.
+      confirm_button: 캐시 초기화
+      success: AI 캐시를 지우는 중입니다. 잠시 걸릴 수 있습니다.
+    condition_filters:
+      transaction_type:
+        income: 수입
+        expense: 지출
+        transfer: 이체
+        equal_to: 같음
+      operators:
+        contains: 포함함
+        does_not_contain: 포함하지 않음
+        starts_with: 다음으로 시작함
+        ends_with: 다음으로 끝남
+        matches_regex: 정규식과 일치함
+        equal_to: 같음
+        is_equal_to: 다음과 같음
+        not_equal_to: 같지 않음
+        is_empty: 비어 있음
+        is_not_empty: 비어 있지 않음
+        greater_than: 보다 큼
+        greater_or_equal_to: 크거나 같음
+        less_than: 보다 작음
+        less_than_or_equal_to: 작거나 같음
+  rule:
+    conditions:
+      condition_group:
+        and_prefix: 그리고
+        match: 일치
+        all: 모두
+        any: 하나라도
+        of_the_following_conditions: 다음 조건
+        add_condition: 조건 추가
+      condition:
+        value_placeholder: 값 입력
