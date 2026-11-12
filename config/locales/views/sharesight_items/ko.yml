@@ -1,0 +1,153 @@
+ko:
+  providers:
+    sharesight:
+      name: Sharesight
+      connection_description: Sharesight API로 포트폴리오를 연결합니다
+      institution_name: Sharesight
+  sharesight_accounts:
+    settings_fields:
+      title: Sharesight 현금 및 배당금
+      description: 이 포트폴리오의 현금과 배당금이 있는 계좌를 선택해 중복 집계되지 않도록 하세요.
+      cash_mode: 현금 처리 방식
+      cash_modes:
+        broker: 브로커 계좌에 보관
+        settlement: 다른 계좌를 통해 결제
+        untracked: 추적 안 함 (주식만)
+      cash_mode_help: 다른 계좌를 이용하거나 현금을 추적하지 않으면 이 계좌에는 주식만 표시됩니다. 각 거래의 현금은 이체로 상계되며,
+        실제 결제에 사용된 계좌와 연결됩니다.
+      settlement_account: 결제 계좌
+      settlement_starts_on: 해당 계좌에서 결제 시작일
+      settlement_window_days: 은행 거래 내역에 표시되기까지 걸릴 수 있는 일수
+      settlement_help: 매수·매도 거래와 해당 계좌로 지급된 각 배당금은 금액이 일치하는 거래와 연결되어 이체로 처리됩니다. 수동
+        계좌에는 해당 거래가 기록됩니다. 시작일 이전에는 현금을 브로커가 보유했습니다.
+      choose_account: 계좌 선택
+      no_account: 없음
+      funding_account: 자금 입출금 계좌
+      funding_match_terms: 자금 거래 내역 문구
+      funding_match_terms_placeholder: CMC Share Transfer, CMC Markets
+      funding_help: 자금 입출금 계좌에서 이름이나 메모에 다음 문구 중 하나라도 포함된 입금·출금은 이 계좌에도 반영되고 이체로 연결됩니다.
+        문구는 쉼표로 구분하세요.
+      cash_anchor_amount: 브로커 계좌의 현금
+      cash_anchor_on: 기준일
+      cash_anchor_help: Sharesight에서 확인할 수 없는 현금의 경우, 해당 날짜의 잔액을 입력하면 그 이후 여기에 기록된
+        모든 거래를 반영해 잔액을 계산합니다. 브로커 계좌 잔액을 확인할 때마다 업데이트하세요.
+      dividend_mode: 배당금 및 분배금
+      dividend_modes:
+        with_cash: 현금이 있는 계좌에 반영
+        other_account: 다른 계좌로 지급
+        skip: 가져오지 않음 (다른 연결에서 표시)
+      dividend_mode_help: 다른 계좌로 지급된 배당금도 여기서는 수입으로 집계되며, 지급받은 계좌의 입금 거래와 연결됩니다.
+      dividend_account: 지급 계좌
+      sync_start_date: 거래 내역 가져오기 시작일
+      sync_start_date_help: 이전 거래와 배당금은 가져오지 않으며, 이미 가져온 내역도 삭제됩니다.
+    errors:
+      settlement_account_missing: 포트폴리오가 결제되는 계좌를 선택하세요.
+      dividend_account_missing: 배당금을 지급받는 계좌를 선택하세요.
+      cash_anchor_incomplete: 브로커 계좌의 현금 잔액과 확인 날짜를 모두 입력하세요.
+      invalid_date:
+        settlement_starts_on: 결제 계좌 이용 시작일이 올바른 날짜가 아닙니다.
+        cash_anchor_on: 브로커 계좌의 현금을 확인한 날짜가 올바르지 않습니다.
+        sync_start_date: 거래 내역 가져오기 시작일이 올바른 날짜가 아닙니다.
+      account_not_in_family: '%{name} 계좌는 내 계좌에 포함되어 있지 않습니다.'
+      account_is_portfolio: '%{name} 계좌는 이 포트폴리오 자체의 계좌입니다.'
+    notices:
+      unsettled_debit: '%{date}에 %{account}에서 %{description} 거래의 %{amount} 출금 내역을
+        아직 찾을 수 없습니다.'
+      unsettled_credit: '%{date}에 %{account}에서 %{description} 거래의 %{amount} 입금 내역을
+        아직 찾을 수 없습니다.'
+      units_drift: '%{account}: Sharesight의 %{ticker} 보유량은 %{held}이지만 거래 내역 합계는 %{traded}입니다.'
+  sharesight_items:
+    defaults:
+      name: Sharesight
+      portfolio_name: Sharesight 포트폴리오 %{id}
+    sharesight_item:
+      deletion_in_progress: 삭제 진행 중
+      syncing: 동기화 중
+      requires_update: API 클라이언트를 확인해야 합니다
+      error: 오류
+      synced: '%{time} 전에 동기화됨. %{summary}.'
+      never_synced: 동기화한 적 없음.
+      setup_accounts: 포트폴리오 설정
+      delete: 삭제
+      accounts_need_setup: 포트폴리오 설정 필요
+      accounts_need_setup_description: Sharesight 포트폴리오를 Sure 계좌에 연결해야 합니다.
+      no_accounts_discovered: 아직 Sharesight 포트폴리오를 찾지 못했습니다.
+      no_accounts_discovered_description: API 클라이언트를 저장한 후 동기화를 실행해 포트폴리오를 찾으세요.
+    setup_accounts:
+      page_title: Sharesight 포트폴리오 설정
+      dialog_title: Sharesight 포트폴리오 설정
+      subtitle: Sharesight 포트폴리오를 투자 계좌에 연결하세요.
+      info_box:
+        title: Sharesight API 가져오기
+        items:
+          item_1: 현재 보유 종목의 가격과 수량 및 포트폴리오 가치
+          item_2: 매수, 매도, 기초 잔액, 자본 환급, 재투자 배당금
+          item_3: Sharesight 현금 계좌의 입금, 출금, 이자 및 수수료
+      status:
+        fetching_accounts: Sharesight에서 포트폴리오를 가져오는 중...
+        no_accounts_found_title: 포트폴리오를 찾지 못했습니다.
+        no_accounts_found_description: Sure에서 Sharesight 포트폴리오를 찾을 수 없습니다. API 클라이언트가
+          유효한지 확인하세요.
+      available_accounts:
+        title: 사용 가능한 포트폴리오
+        account_type_investment: 투자
+        account_summary: '%{account_type} • 잔액: %{balance}'
+        account_id: '포트폴리오 ID: %{account_id}'
+      link_existing:
+        description: 또는 찾은 포트폴리오를 기존 수동 투자 계좌에 연결하세요.
+        manual_account_option: '%{name} (%{balance})'
+        select_prompt: 계좌 선택...
+      linked_accounts:
+        title: 이미 연결됨
+        linked_to_html: '연결 대상: %{account}'
+      buttons:
+        refresh: 새로고침
+        cancel: 취소
+        back_to_settings: 설정으로 돌아가기
+        create_selected_accounts: 선택한 계좌 만들기
+        link: 연결
+        done: 완료
+    sync:
+      status:
+        checking_credentials: Sharesight 인증 정보를 확인하는 중...
+        importing_portfolios: Sharesight 포트폴리오를 가져오는 중...
+        checking_configuration: 포트폴리오 설정을 확인하는 중...
+        accounts_need_setup:
+          one: Sharesight 포트폴리오 1개를 설정해야 합니다...
+          other: Sharesight 포트폴리오 %{count}개를 설정해야 합니다...
+        processing_activity: 보유 내역과 활동을 처리하는 중...
+        calculating_balances: 잔액을 계산하는 중...
+    sync_status:
+      no_accounts: 아직 Sharesight 포트폴리오를 찾지 못했습니다
+      all_linked:
+        one: 포트폴리오 1개 연결됨
+        other: 포트폴리오 %{count}개 연결됨
+      partial: '%{linked}개 연결됨, %{unlinked}개 설정 필요'
+    select_existing_account:
+      title: Sharesight 포트폴리오 연결
+      no_accounts_available: 연결되지 않은 Sharesight 포트폴리오가 아직 없습니다.
+      run_sync_hint: API 클라이언트를 저장한 후 설정 > 제공업체에서 동기화를 실행하세요.
+      wait_for_sync: 포트폴리오 검색 동기화가 완료될 때까지 기다리세요.
+      balance: 잔액
+      link: 연결
+      cancel: 취소
+    create:
+      success: Sharesight 설정을 완료했습니다.
+    update:
+      success: Sharesight 설정을 업데이트했습니다.
+    destroy:
+      success: Sharesight 연결 삭제를 예약했습니다.
+    select_accounts:
+      not_configured: Sharesight가 설정되지 않았습니다.
+    link_existing_account:
+      not_found: 계좌 또는 Sharesight 포트폴리오를 찾을 수 없습니다.
+      only_manual_investment: 수동 투자 계좌만 Sharesight에 연결할 수 있습니다.
+      already_linked: 이 Sharesight 포트폴리오는 이미 연결되어 있습니다.
+      success: Sharesight 포트폴리오에 연결했습니다.
+      failed: Sharesight 포트폴리오 연결에 실패했습니다.
+    complete_account_setup:
+      success:
+        one: Sharesight 계좌 %{count}개를 만들었습니다.
+        other: Sharesight 계좌 %{count}개를 만들었습니다.
+      none_selected: 포트폴리오를 선택하지 않았습니다.
+      none_created: 계좌를 만들지 않았습니다.
