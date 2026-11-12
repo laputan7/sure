@@ -1,0 +1,650 @@
+ko:
+  import:
+    qif_category_selections:
+      update:
+        success: 카테고리와 태그가 저장되었습니다.
+      show:
+        title: 구성 및 선택
+        description: 감지된 날짜 형식을 확인한 다음 QIF 파일에서 %{product_name}(으)로 가져올 카테고리와 태그를
+          선택하세요.
+        categories_heading: 카테고리
+        categories_found:
+          one: 카테고리 1개를 찾았습니다
+          other: 카테고리 %{count}개를 찾았습니다
+        category_name_col: 카테고리 이름
+        transactions_col: 거래
+        tags_heading: 태그
+        tags_found:
+          one: 태그 1개를 찾았습니다
+          other: 태그 %{count}개를 찾았습니다
+        tag_name_col: 태그 이름
+        txn_count:
+          one: 거래 1건
+          other: 거래 %{count}건
+        split_warning_title: 분할 거래 감지
+        split_warning_description: 이 QIF 파일에 분할 거래가 포함되어 있습니다. 가져오기 전에 아래에서 감지된 분할
+          카테고리와 태그를 확인하세요.
+        split_badge: 분할
+        empty_state_primary: 이 QIF 파일에서 카테고리나 태그를 찾지 못했습니다.
+        empty_state_secondary: 모든 거래를 카테고리나 태그 없이 가져옵니다.
+        submit: 검토 단계로 계속
+    cleans:
+      show:
+        not_configured: 계속하기 전에 가져오기를 구성해 주세요.
+        description: 아래 표에서 데이터를 수정하세요.  빨간색 셀은 유효하지 않습니다.
+        errors_notice: 데이터에 오류가 있습니다.  오류 위에 마우스를 올려 세부정보를 확인하세요.
+        errors_notice_mobile: 데이터에 오류가 있습니다.  오류 툴팁을 눌러 세부정보를 확인하세요.
+        title: 데이터 정리
+        data_cleaned: 데이터가 정리되었습니다
+        next_step: 다음 단계
+        all_rows: 모든 행
+        error_rows: 오류가 있는 행
+    configurations:
+      update:
+        success: 가져오기 설정이 성공적으로 완료되었습니다.
+        monarch_success: 계좌 선택 사항을 저장했습니다.
+      monarch:
+        title: Monarch 계좌를 하나씩 확인하세요
+        description: 각 계좌를 가져올 위치와 유형, 가져올 항목을 선택하세요.
+        help_title: 각 선택 항목의 작동 방식
+        help_account: 새 계좌로 가져와 원하는 이름을 지정하거나 기존 수동 계좌로 가져올 수 있습니다. 기존 계좌의 이름, 유형
+          및 자체 내역은 유지되며, 시작 잔액이 Monarch 내역 기간에 포함되면 해당 기간의 시작 시점으로 이동합니다. 계좌 상태는 선택한
+          상태를 따릅니다. 보유 자산이나 거래가 있는 계좌로는 가져올 수 없습니다.
+        help_closed: 이미 해지한 계좌는 상태를 해지됨으로 변경하세요. 해당 계좌는 Monarch의 마지막 잔액 다음 날 잔액이 0이
+          되고 현재 잔액에서 숨겨지지만, 순자산 내역에는 계속 표시됩니다. 비활성 계좌는 지난 %{days}일 동안 활동이 없었다는 뜻이며
+          반드시 해지된 것은 아닙니다.
+        help_transactions: 거래를 끄면 계좌 잔액 내역만 가져옵니다.
+        help_balance: 오늘 잔액은 Monarch의 최신 잔액으로 시작합니다. 최신 정보가 아니라면 수정하세요. 수정한 금액은 오늘의
+          잔액으로 기록됩니다. 카드와 대출의 미상환 금액은 양수로 입력하세요.
+        table_label: Monarch 계좌
+        import_column: 가져오기
+        account_column: 계좌 이름
+        destination_column: 가져올 위치
+        type_column: 유형
+        status_column: 상태
+        status_open: 사용 중
+        status_closed: 해지됨
+        toggle_all_label: 모든 계좌의 %{column}
+        transactions_column: 거래
+        balance_column: 오늘 잔액
+        import_label: '%{name} 가져오기'
+        destination_label: '%{name}을(를) 가져올 위치'
+        name_label: '%{name}의 Sure 내 이름'
+        monarch_name: 'Monarch 내 이름: %{name}'
+        type_label: '%{name}의 유형'
+        status_label: '%{name} 계좌 사용 중'
+        transactions_label: '%{name}의 거래 가져오기'
+        balance_label: '%{name}의 오늘 잔액'
+        new_account: 새 계좌
+        inactive: 비활성
+        last_activity: 마지막 활동 %{date}
+        no_activity: 활동 없음
+        no_transactions: 없음
+        submit: 가져오기 검토
+      account_import:
+        leave_empty: 비워 두기
+        default: 기본값
+        entity_type: 항목 유형
+        name: 이름
+        balance: 잔액
+        currency: 통화
+        balance_date: 잔액 날짜
+        date_format: 날짜 형식
+        select_format: 형식 선택
+        apply_configuration: 설정 적용
+      transaction_import:
+        date_label: 날짜
+        select_column: 열 선택
+        select_format: 형식 선택
+        amount_label: 금액
+        default: 기본값
+        currency_label: 통화
+        format_label: 형식
+        amount_type_strategy_label: 금액 유형 전략
+        select_strategy: 전략 선택
+        set: 설정
+        as_amount_type_column: 금액 유형 열로
+        select_value: 값 선택
+        as_identifier_value: 식별자 값으로
+        treat_as_html: '"<span class="font-medium">%{value}</span>"(으)로 처리'
+        income_inflow: 수입(유입)
+        expense_outflow: 지출(유출)
+        select_type: 유형 선택
+        leave_empty: 비워 두기
+        account_label: 계좌
+        name_label: 이름
+        category_label: 카테고리
+        tags_label: 태그
+        notes_label: 메모
+        apply_configuration: 설정 적용
+        incomes_are_positive: 수입은 양수
+        incomes_are_negative: 수입은 음수
+        amount_type_label: 금액 유형
+        select_convention: 규칙 선택
+        date_format_label: 날짜 형식
+        rows_to_skip_label: 처음 n개 행 건너뛰기
+      trade_import:
+        select_column: 열 선택
+        date_label: 날짜
+        quantity_label: 수량
+        buys_are_positive: 매수 수량은 양수
+        buys_are_negative: 매수 수량은 음수
+        default: 기본값
+        currency_label: 통화
+        format_label: 형식
+        select_format: 형식 선택
+        ticker_label: 티커
+        leave_empty: 비워 두기
+        stock_exchange_code_label: 증권 거래소 코드
+        price_label: 가격
+        account_label: 계좌
+        name_label: 이름
+        note_label: 메모
+        no_security_provider_warning: 증권 가격 제공자가 설정되지 않았습니다. 거래 가져오기는 가능하지만 Sure에서
+          가격 내역을 채워 넣지 않습니다. 설정에서 제공자를 구성하세요.
+        date_format_label: 날짜 형식
+        apply_configuration: 설정 적용
+      category_import:
+        button_label: 계속
+        description: 간단한 CSV 파일을 업로드하세요(데이터를 내보낼 때 생성되는 파일과 같은 형식). 열을 자동으로 매핑합니다.
+        instructions: 계속을 선택하면 CSV를 분석한 뒤 정리 단계로 이동합니다.
+      merchant_import:
+        button_label: 계속
+        description: 판매처가 포함된 CSV 파일을 업로드하세요. 열을 자동으로 매핑합니다.
+        instructions: 계속을 선택하면 CSV를 분석한 뒤 정리 단계로 이동합니다.
+      mint_import:
+        date_format_label: 날짜 형식
+        account_optional: 계좌(선택 사항)
+        amount: 금액
+        apply_configuration: 설정 적용
+        category_optional: 카테고리(선택 사항)
+        currency: 통화
+        date: 날짜
+        format: 형식
+        incomes_negative: 수입은 음수
+        incomes_positive: 수입은 양수
+        intro: Mint 가져오기를 미리 설정했습니다. 다음 단계로 진행하세요.
+        leave_empty: 비워 두기
+        name_optional: 이름(선택 사항)
+        select_format: 형식 선택
+        tags_optional: 태그(선택 사항)
+      actual_import:
+        preconfigured_notice: Actual Budget 가져오기를 미리 설정했습니다. 다음 단계로 진행하세요.
+        leave_empty: 비워 두기
+        date_label: 날짜
+        date_format_label: 날짜 형식
+        amount_label: 금액
+        signage_convention_label: 부호 규칙
+        incomes_are_negative: 수입은 음수
+        incomes_are_positive: 수입은 양수
+        account_label: 계좌(선택 사항)
+        name_label: 수취인(선택 사항)
+        category_label: 카테고리(선택 사항)
+        notes_label: 메모(선택 사항)
+        apply_configuration: 설정 적용
+      ynab_import:
+        preconfigured_notice: YNAB 가져오기를 미리 설정했습니다. 다음 단계로 진행하세요.
+        amount_notice: 유출 및 유입 열에서 금액을 자동으로 감지합니다.
+        leave_empty: 비워 두기
+        date_label: 날짜
+        date_format_label: 날짜 형식
+        account_label: 계좌(선택 사항)
+        name_label: 수취인(선택 사항)
+        category_label: 카테고리(선택 사항)
+        notes_label: 메모(선택 사항)
+        apply_configuration: 설정 적용
+      rule_import:
+        description: 규칙 가져오기를 설정하세요. CSV 데이터를 기준으로 규칙을 만들거나 업데이트합니다.
+        process_button: 규칙 처리
+        process_help: 아래 버튼을 클릭하여 CSV를 처리하고 규칙 행을 생성하세요.
+      show:
+        description: CSV의 각 필드에 해당하는 열을 선택하세요.
+        title: 가져오기 설정
+        template_found: 템플릿 설정을 찾았습니다
+        template_description: 이 계좌에서 이전에 가져온 설정을 찾았습니다. 이번 가져오기에 적용할까요?
+        manually_configure: 직접 설정
+        apply_template: 템플릿 적용
+        sample_caption: 업로드한 CSV의 샘플 데이터
+    confirms:
+      sure_import:
+        title: 가져오기 확인
+        description: 내보낸 파일에서 가져올 데이터를 확인하세요.
+        summary: 가져오기 요약
+        empty_summary: 이 파일에서 가져올 수 있는 레코드를 찾지 못했습니다. 파일이 비어 있거나 각 줄이 "type" 및 "data"
+          키를 가진 JSON 객체이며 이 가져오기에서 지원하는 유형을 사용해야 한다는 예상 내보내기 형식과 일치하지 않을 수 있습니다.
+        publish_button: 가져오기 시작
+        cancel: 취소
+      mappings:
+        create_account: 계좌 만들기
+        csv_mapping_label: CSV의 %{mapping}
+        sure_mapping_label: '%{product_name}의 %{mapping}'
+        no_accounts: 아직 계좌가 없습니다. CSV의 (미할당) 행에 사용할 계좌를 만들거나, 정리 단계로 돌아가 사용할 계좌 이름을
+          입력해 주세요.
+        rows_label: 행
+        unassigned_account: 미할당 행에 사용할 새 계좌를 만드시겠습니까?
+        next: 다음
+      show:
+        invalid_data: 데이터가 유효하지 않습니다. 모든 오류가 해결될 때까지 수정해 주세요
+        account_mapping_description: 가져온 파일의 모든 계좌를 %{product_name}의 기존 계좌에 지정하세요.  새
+          계좌를 추가하거나 분류하지 않은 상태로 둘 수도 있습니다.
+        account_mapping_title: 계좌 지정
+        account_type_mapping_description: 가져온 파일의 모든 계좌 유형을 %{product_name}의 계좌 유형에
+          지정하세요.
+        account_type_mapping_title: 계좌 유형 지정
+        category_mapping_description: 가져온 파일의 모든 카테고리를 %{product_name}의 기존 카테고리에 지정하세요.  새
+          카테고리를 추가하거나 분류하지 않은 상태로 둘 수도 있습니다.
+        category_mapping_title: 카테고리 지정
+        tag_mapping_description: 가져온 파일의 모든 태그를 %{product_name}의 기존 태그에 지정하세요.  새
+          태그를 추가하거나 분류하지 않은 상태로 둘 수도 있습니다.
+        tag_mapping_title: 태그 지정
+    uploads:
+      handle_qif_upload:
+        qif_uploaded: QIF 파일을 성공적으로 업로드했습니다.
+        qif_account_required: QIF 가져오기에 사용할 계좌를 선택해 주세요
+      update:
+        qif_uploaded: QIF 파일을 성공적으로 업로드했습니다.
+        monarch_uploaded: Monarch 내보내기 파일을 업로드했습니다.
+        monarch_balances_required: Monarch 잔액 내보내기 파일을 선택하세요.
+      show:
+        monarch_title: Monarch 내보내기 파일 업로드
+        monarch_description: Monarch에서 계좌, 거래 및 잔액 내역을 가져오세요.
+        monarch_export_title: Monarch에서 데이터 다운로드
+        monarch_export_step_settings_html: 웹에서 Monarch에 로그인하고 %{link}을(를) 여세요.
+        monarch_export_settings_link: 설정 → 데이터
+        monarch_export_step_download: 거래 내역과 계좌 잔액 내역을 각각 CSV 파일로 다운로드하세요.
+        monarch_export_step_upload: 아래에서 파일을 선택하세요.
+        monarch_export_help_html: Monarch에서 각 다운로드 방법을 %{link}에서 설명합니다.
+        monarch_export_help_link: 도움말 문서
+        monarch_balances_label: 잔액 내보내기
+        monarch_transactions_label: 거래 내보내기
+        monarch_transactions_hint: 잔액 내역만 가져오려면 거래 내보내기 파일은 제외하세요.
+        monarch_upload_button: 내보내기 파일 업로드
+        csv_invalid: 헤더와 데이터 행이 하나 이상 포함된 유효한 CSV여야 합니다
+        drop_csv_title: 업로드할 CSV를 끌어 놓으세요
+        drop_csv_subtitle: 파일이 자동으로 업로드됩니다
+        upload_csv_tab: CSV 업로드
+        copy_paste_tab: 복사 및 붙여넣기
+        account_optional_label: 계좌 (선택 사항)
+        multi_account_import: 여러 계좌 가져오기
+        upload_csv_button: CSV 업로드
+        paste_csv_placeholder: CSV 파일 내용을 여기에 붙여넣으세요
+        download_sample_csv: 샘플 CSV 다운로드
+        to_see_format: 필수 CSV 형식을 확인하려면
+        qif_title: QIF 파일 업로드
+        qif_description: 단일 계좌 파일은 계좌를 선택하고, QIF 내보내기에 계좌 이름이 포함된 경우에는 비워 두세요.
+        qif_account_label: 계좌
+        qif_account_placeholder: 계좌 선택…
+        qif_file_prompt: QIF 파일을 여기에 추가하려면
+        qif_file_hint: .qif 파일만 가능
+        qif_submit: QIF 업로드
+        browse: 찾아보기
+        csv_file_prompt: CSV 파일을 여기에 추가하려면
+        description: 아래에서 CSV 파일을 붙여넣거나 업로드하세요.  시작하기 전에 아래 표의 안내를 확인해 주세요.
+        instructions_1: 아래는 가져올 수 있는 열을 보여주는 CSV 예시입니다.
+        instructions_2: CSV에는 헤더 행이 있어야 합니다
+        instructions_3: 열 이름은 원하는 대로 지정할 수 있습니다.  다음 단계에서 열을 매핑합니다.
+        instructions_4: 별표(*)가 표시된 열은 필수 데이터입니다.
+        instructions_5: 숫자에 쉼표, 통화 기호 또는 괄호를 사용하지 마세요.
+        title: 데이터 가져오기
+      sure_import:
+        title: 내보내기 파일에서 가져오기
+        description: 데이터 내보내기의 all.ndjson 파일을 업로드하여 계좌, 거래, 카테고리 등을 복원하세요.
+        drop_title: 업로드할 NDJSON을 끌어 놓으세요
+        drop_subtitle: 파일이 자동으로 업로드됩니다
+        browse: 찾아보기
+        browse_hint: all.ndjson 파일을 여기에 추가하려면
+        upload_button: NDJSON 업로드
+        hint_html: 데이터 내보내기 ZIP에서 <strong>all.ndjson</strong> 파일을 업로드하세요
+        ndjson_invalid: 레코드가 하나 이상 포함된 유효한 NDJSON이어야 합니다
+  imports:
+    configuration_locked: 이 가져오기의 데이터는 이미 Sure에 있으므로 파일과 선택 사항을 변경할 수 없습니다. 완료하려면
+      다시 시도하거나, 처음부터 시작하려면 삭제하세요.
+    mapping_labels:
+      account_type: 계좌 유형
+      account: 계좌
+      category: 카테고리
+      tag: 태그
+    dry_run_resources:
+      transactions: 거래
+      balances: 잔액
+      accounts: 계좌
+      categories: 카테고리
+      tags: 태그
+      rules: 규칙
+      merchants: 가맹점
+      recurring_transactions: 정기 거래
+      transfers: 이체
+      rejected_transfers: 거부된 이체
+      trades: 매매
+      holdings: 보유 자산
+      valuations: 평가액
+      budgets: 예산
+      budget_categories: 예산 카테고리
+    column_labels:
+      date: 날짜
+      amount: 금액
+      name: 이름
+      currency: 통화
+      category: 카테고리
+      tags: 태그
+      account: 계좌
+      notes: 메모
+      qty: 수량
+      ticker: 티커
+      exchange: 거래소
+      price: 가격
+      entity_type: 유형
+      category_parent: 상위 카테고리
+      category_color: 색상
+      category_icon: Lucide 아이콘
+      merchant_color: 색상
+      merchant_website: 웹사이트 URL
+    summary:
+      title: 가져오기 요약
+      subtitle: 이 명세서에서 %{account}의 각 거래가 어떻게 처리되었는지 확인하세요.
+      subtitle_no_account: 이 명세서의 각 거래가 어떻게 처리되었는지 확인하세요.
+      extracted: 명세서에서 찾음
+      already_recorded: 이미 기록됨
+      already_recorded_hint: 이 계좌에 이미 있던 거래와 일치하여 조정 완료로 표시했습니다.
+      imported: 새 항목으로 가져옴
+      awaiting_review: 가져오기 대기 중
+      fully_reconciled:
+        one: 가져올 항목이 없습니다 — 명세서의 유일한 거래가 이미 등록되어 있습니다.
+        other: 가져올 항목이 없습니다 — %{count}건의 거래가 모두 이미 등록되어 있습니다.
+      statement_evidence_html: '%{statement} 기준으로 조정 완료되었습니다.'
+      close: 닫기
+    update:
+      account_saved: 계좌를 저장했습니다.
+      account_locked: 이 가져오기는 이미 게시되어 계좌를 변경할 수 없습니다. 다른 곳으로 가져오려면 먼저 되돌리세요.
+      invalid_account: 계좌를 찾을 수 없습니다.
+    publish:
+      started: 백그라운드에서 가져오기를 시작했습니다.
+      max_rows_exceeded: 가져오기 행 수가 최대 허용치 %{max}개를 초과합니다.
+      guest_new_categories_or_tags: 게스트는 카테고리나 태그를 만들 수 없습니다. 기존 항목에 매핑하거나 비워 두세요.
+    revert:
+      started: 백그라운드에서 가져오기를 되돌리는 중입니다.
+    cancel:
+      cancelled: 가져오기를 실패로 표시했습니다. 가져오기 페이지에서 다시 시도할 수 있습니다.
+      not_cancellable: 지금은 이 가져오기를 실패로 표시할 수 없습니다. 작업이 아직 실행 중일 수 있습니다. 한 시간 동안 비활성
+        상태가 된 후 다시 시도하세요.
+    apply_template:
+      template_applied: 템플릿을 적용했습니다.
+      no_template_found: 템플릿을 찾을 수 없습니다. 가져오기를 직접 구성하세요.
+    destroy:
+      deleted: 가져오기를 삭제했습니다.
+    failure:
+      title: 가져오기 실패
+      description: 파일 형식이 올바른지, 오류가 없는지, 모든 필수 항목이 입력되었는지 확인한 뒤 다시 시도하세요.
+      try_again: 다시 시도
+    success:
+      title: 가져오기 완료
+      description: 가져온 데이터가 앱에 성공적으로 추가되어 이제 사용할 수 있습니다.
+      back_to_dashboard: 대시보드로 돌아가기
+      verification:
+        title: 다시 읽기 검증
+        checked: 확인됨
+        mismatches: 불일치
+        status:
+          not_verified: 검증되지 않음
+          matched: 일치
+          mismatch: 불일치
+          failed: 실패
+          reverted: 되돌림
+    importing:
+      title: 가져오는 중
+      description: 가져오기가 진행 중입니다. 상태 업데이트는 가져오기 메뉴에서 확인하거나 '상태 확인'을 눌러 페이지를 새로고침하세요.
+        앱을 계속 사용하셔도 됩니다.
+      check_status: 상태 확인
+      back_to_dashboard: 대시보드로 돌아가기
+    revert_failure:
+      title: 가져오기 되돌리기 실패
+      description: 다시 시도하세요.
+      try_again: 다시 시도
+    date_format:
+      heading: 날짜 형식
+      description: 파일에서 날짜 형식을 자동으로 감지했습니다. 날짜가 올바르지 않게 보이면 변경하세요.
+      preview: 처음으로 해석된 날짜
+      error_title: 날짜 형식을 감지할 수 없습니다
+      error_description: 지원되는 날짜 형식으로 이 파일의 날짜를 해석할 수 없습니다. 파일에 유효한 날짜가 있는지 확인하세요.
+    type_labels:
+      transaction_import: 거래 가져오기
+      trade_import: 매매 가져오기
+      account_import: 계좌 가져오기
+      mint_import: Mint 가져오기
+      actual_import: Actual 가져오기
+      ynab_import: YNAB 가져오기
+      monarch_import: Monarch 가져오기
+      qif_import: QIF 가져오기
+      category_import: 카테고리 가져오기
+      rule_import: 규칙 가져오기
+      merchant_import: 가맹점 가져오기
+      pdf_import: PDF 가져오기
+      document_import: 문서 가져오기
+      sure_import: Sure 가져오기
+    steps:
+      upload: 업로드
+      accounts: 계좌
+      configure: 설정
+      clean: 정리
+      map: 매핑
+      confirm: 확인
+      select: 선택
+      label: '%{step}단계'
+      progress: 전체 %{total}단계 중 %{step}단계
+    empty:
+      message: 가져오기를 찾을 수 없습니다.
+    index:
+      title: 가져오기
+      new: 새 가져오기
+    table:
+      title: 가져오기
+      header:
+        date: 날짜
+        operation: 작업
+        status: 상태
+        actions: 작업
+      row:
+        type_labels:
+          transaction_import: 거래
+          trade_import: 거래 내역
+          account_import: 계좌
+          mint_import: Mint
+          actual_import: Actual
+          ynab_import: YNAB
+          qif_import: QIF
+          category_import: 카테고리
+          rule_import: 규칙
+          merchant_import: 가맹점
+          pdf_import: PDF
+          document_import: 문서
+          sure_import: Sure
+        status:
+          in_progress: 진행 중
+          uploading: 행 처리 중
+          reverting: 되돌리는 중
+          revert_failed: 되돌리기 실패
+          complete: 완료
+          failed: 실패
+        actions:
+          revert: 되돌리기
+          confirm_revert: This will delete 거래s that were 가져오기ed, but you will still
+            be able to 검토 and re-가져오기 your data at any time.
+          delete: 삭제
+          view: 보기
+          mark_failed: 실패로 표시
+          confirm_mark_failed: This 가져오기 has been inactive for a while and its background
+            job was likely interrupted. Mark it as 실패 so you can try again? No 가져오기ed
+            data is kept.
+      empty: 아직 가져오기가 없습니다.
+    new:
+      description: 금융 도구에서 가져오거나 원본 데이터 파일을 업로드하세요.
+      tab_financial_tools: 금융 도구 및 파일
+      tab_raw_data: 원본 데이터
+      import_ynab: YNAB에서 가져오기
+      import_monarch: Monarch에서 가져오기
+      import_accounts: 계좌 가져오기
+      import_categories: 카테고리 가져오기
+      import_merchants: 가맹점 가져오기
+      import_mint: Mint에서 가져오기
+      import_actual: Actual Budget에서 가져오기
+      import_portfolio: 투자 내역 가져오기
+      import_rules: 규칙 가져오기
+      import_transactions: 거래 가져오기
+      import_qif: Quicken에서 가져오기 (QIF)
+      import_sure: Sure에서 가져오기
+      import_sure_description: 전체 내보내기 .ndjson 파일
+      import_file: 문서 가져오기
+      import_file_description: PDF AI 분석 및 검색 가능한 파일 업로드
+      requires_account: 이 옵션을 사용하려면 먼저 계좌를 가져오세요.
+      resume: '%{type} 계속하기'
+      sources: 소스
+      title: 새 가져오기
+    create:
+      file_too_large: 파일이 너무 큽니다. 최대 크기는 %{max_size}MB입니다.
+      invalid_file_type: 잘못된 파일 형식입니다. CSV 파일을 업로드하세요.
+      csv_uploaded: CSV를 성공적으로 업로드했습니다.
+      ndjson_uploaded: NDJSON 파일을 성공적으로 업로드했습니다.
+      pdf_too_large: PDF 파일이 너무 큽니다. 최대 크기는 %{max_size}MB입니다.
+      pdf_processing: PDF를 처리하고 있습니다. 분석이 완료되면 이메일을 보내드립니다.
+      invalid_pdf: 업로드한 파일은 올바른 PDF가 아닙니다.
+      missing_upload: 파일을 받지 못했습니다. 다시 업로드해 주세요.
+      duplicate_pdf_unavailable: 이 PDF는 접근할 수 없는 명세서로 이미 저장되어 있습니다.
+      document_too_large: 문서 파일이 너무 큽니다. 최대 크기는 %{max_size}MB입니다.
+      invalid_document_file_type: 현재 벡터 저장소에서 지원하지 않는 문서 파일 형식입니다.
+      document_uploaded: 문서를 성공적으로 업로드했습니다.
+      document_upload_failed: 벡터 저장소에 문서를 업로드하지 못했습니다. 다시 시도해 주세요.
+      invalid_ndjson_file_type: 파일 형식이 잘못되었습니다. 올바른 .ndjson 또는 .json 내보내기 파일을 업로드하세요.
+      document_provider_not_configured: 문서 업로드용 벡터 저장소가 설정되지 않았습니다.
+    show:
+      finalize_upload: 파일 업로드를 완료해 주세요.
+      finalize_mappings: 계속하기 전에 매핑을 완료해 주세요.
+    ready:
+      description: 이 가져오기를 게시하면 계좌에 추가될 새 항목의 요약입니다.
+      monarch_existing_names_title: 이름이 같은 계좌가 이미 있습니다
+      monarch_existing_names_description: '%{names}이라는 이름의 계좌가 이미 있습니다. 게시하면 해당 계좌와
+        별도로 새 계좌가 만들어집니다. 기존 계좌로 가져오려면 계좌 단계에서 해당 계좌를 선택하세요.'
+      monarch_conflicts_title: 기존 잔액 중 Monarch와 다른 항목이 있습니다
+      monarch_conflicts_description:
+        one: 하루 동안 가져오려는 계좌에 Monarch와 다른 잔액 변경 내역이 이미 있습니다. 기존 값이 유지됩니다.
+        other: '%{count}일 동안 가져오려는 계좌에 Monarch와 다른 잔액 변경 내역이 이미 있습니다. 기존 값이 유지됩니다.'
+      monarch_overlap_title: 같은 기간에 이미 거래가 있습니다
+      monarch_overlap_description:
+        one: 가져오려는 계좌의 Monarch 내역 기간에 기존 거래 1건이 있으며, Monarch 거래와 일치하지 않습니다. 이 거래는
+          유지되고 잔액에 반영됩니다.
+        other: 가져오려는 계좌들의 Monarch 내역 기간에 기존 거래 %{count}건이 있으며, Monarch 거래와 일치하지 않습니다.
+          이 거래들은 유지되고 잔액에 반영됩니다.
+      monarch_duplicates_title: Sure에 이미 있는 거래는 건너뜁니다
+      monarch_duplicates_description:
+        one: 가져올 계좌에 Monarch 거래 1건이 이미 있습니다. 이전 가져오기에서 추가되었거나 날짜와 금액이 같으므로 건너뜁니다.
+        other: 가져올 계좌들에 Monarch 거래 %{count}건이 이미 있습니다. 이전 가져오기에서 추가되었거나 날짜와 금액이 같으므로
+          건너뜁니다.
+      monarch_kept_title: 수정한 기초 잔액 일부가 그대로 유지됩니다
+      monarch_kept_description: 가져오기를 취소해도 %{names}의 기초 잔액은 복원되지 않습니다. 가져온 뒤 변경되었기
+        때문입니다. 다시 가져오기 전에 확인하세요.
+      monarch_opening_title: 기초 잔액이 이동합니다
+      monarch_opening_description:
+        one: 기존 계좌 1개의 기초 잔액이 해당 계좌의 Monarch 내역 시작일로 이동합니다. 가져오기를 취소하면 원래대로 돌아갑니다.
+        other: 기존 계좌 %{count}개의 기초 잔액이 각 계좌의 Monarch 내역 시작일로 이동합니다. 가져오기를 취소하면 원래대로
+          돌아갑니다.
+      title: 가져올 데이터 확인
+      summary_item_label: 항목
+      summary_count_label: 개수
+      empty_summary: 이 파일에서 가져올 수 있는 레코드를 찾지 못했습니다. 파일이 비어 있거나 각 줄이 예상한 내보내기 형식과 다를
+        수 있습니다(각 줄은 "type" 및 "data" 키를 포함하고 이 가져오기에서 지원하는 유형을 사용하는 JSON 객체여야 합니다).
+      publish_import: 가져오기 게시
+      back_to_imports: 가져오기 목록으로
+      missing_merchant_warning_title: 이 내보내기에 누락된 가맹점이 있습니다
+      missing_merchant_warning_description:
+        one: 파일의 가맹점 참조 1개가 포함되지 않은 가맹점을 가리킵니다. Sure 내보내기에 제공업체가 지정한 가맹점이 추가되기 전에
+          내보낸 경우 이런 일이 발생할 수 있습니다. 그래도 가져오기를 게시할 수 있습니다. 해당 레코드는 가맹점 없이 가져와지며, 나중에
+          태그를 지정할 수 있습니다.
+        other: 파일의 가맹점 참조 %{count}개가 포함되지 않은 가맹점을 가리킵니다. Sure 내보내기에 제공업체가 지정한 가맹점이
+          추가되기 전에 내보낸 경우 이런 일이 발생할 수 있습니다. 그래도 가져오기를 게시할 수 있습니다. 해당 레코드들은 가맹점 없이 가져와지며,
+          나중에 태그를 지정할 수 있습니다.
+      skipped_recurring_description:
+        one: 이름이 없고 가맹점도 누락된 정기 거래 1건은 건너뜁니다. 자동 감지된 정기 거래는 가져오기가 끝난 뒤 다시 생성됩니다.
+        other: 이름이 없고 가맹점도 누락된 정기 거래 %{count}건은 건너뜁니다. 자동 감지된 정기 거래는 가져오기가 끝난 뒤 다시
+          생성됩니다.
+      reused_taxonomy_notice_title: 이미 있는 카테고리, 태그 또는 가맹점이 있습니다
+      reused_taxonomy_notice_description:
+        one: '이 파일의 카테고리, 태그 또는 가맹점 1개가 계좌에 이미 있습니다(예: 온보딩 시 기본으로 생성된 카테고리). 중복 생성하지
+          않고 기존 항목을 재사용해 이 파일의 데이터로 업데이트합니다.'
+        other: '이 파일의 카테고리, 태그 또는 가맹점 %{count}개가 계좌에 이미 있습니다(예: 온보딩 시 기본으로 생성된 카테고리).
+          중복 생성하지 않고 기존 항목을 재사용해 이 파일의 데이터로 업데이트합니다.'
+      provider_merchant_diff_title: 세부 정보가 다른 가맹점이 이미 있습니다
+      provider_merchant_diff_description:
+        one: 이 파일의 가맹점 1개가 세부 정보가 다른 상태로 이미 존재합니다. 기존 가맹점을 유지하며 이 파일의 값은 적용하지 않습니다.
+        other: 이 파일의 가맹점 %{count}개가 세부 정보가 다른 상태로 이미 존재합니다. 기존 가맹점들을 유지하며 이 파일의 값은
+          적용하지 않습니다.
+      provider_merchant_diff_summary: 차이 보기
+      provider_merchant_diff_none: 없음
+      provider_merchant_diff_fields:
+        website_url: 웹사이트
+        name: 이름
+        provider_merchant_id: 제공업체 ID
+      provider_merchant_diff_row: '%{field}: %{kept} 유지, 파일 값은 %{imported}'
+    errors:
+      custom_column_requires_inflow: Custom column 가져오기s require an inflow column
+        to be selected
+      interrupted: The background worker was interrupted before this finished. Imported
+        data was rolled back — you can safely try again.
+      presumed_lost: Marked as 실패 after the background job was presumed lost. The
+        가져오기ed data was rolled back — you can safely try again.
+    document_types:
+      bank_statement: 은행 명세서
+      credit_card_statement: 신용카드 명세서
+      investment_statement: 투자 명세서
+      financial_document: 금융 문서
+      contract: 계약서
+      other: 기타 문서
+      unknown: 알 수 없는 문서
+    pdf_import:
+      processing_title: PDF 처리 중
+      processing_description: AI로 문서를 분석하고 있습니다. 잠시 시간이 걸릴 수 있습니다. 분석이 완료되면 이메일을 보내드립니다.
+      check_status: 상태 확인
+      back_to_dashboard: 대시보드로 돌아가기
+      failed_title: 처리 실패
+      failed_description: PDF 문서를 처리할 수 없습니다. 다시 시도하거나 고객 지원에 문의하세요.
+      try_again: 다시 시도
+      delete_import: 가져오기 삭제
+      complete_title: 문서 분석 완료
+      complete_description: PDF 분석 결과입니다.
+      document_type_label: 문서 유형
+      source_statement: 원본 명세서
+      summary_label: 요약
+      email_sent_notice: 다음 단계 안내 이메일을 보냈습니다.
+      back_to_imports: 가져오기 목록으로 돌아가기
+      unknown_state_title: 알 수 없는 상태
+      unknown_state_description: 가져오기가 예상치 못한 상태입니다. 가져오기 목록으로 돌아가세요.
+      processing_failed_with_message: '%{message}'
+      processing_failed_generic: '처리 실패: %{error}'
+      errors:
+        provider_not_configured: AI 제공업체가 설정되지 않았습니다.
+        provider_no_pdf_support: AI 제공업체가 PDF 처리를 지원하지 않습니다.
+      ready_for_review_title: 검토 준비 완료
+      ready_for_review_description:
+        one: 명세서의 거래 %{count}건이 아직 이 계좌에 없습니다. 검토 후 게시하여 추가하세요.
+        other: 명세서의 거래 %{count}건이 아직 이 계좌에 없습니다. 검토 후 게시하여 추가하세요.
+      transactions_extracted: 추출된 거래
+      transactions_extracted_count:
+        one: 거래 %{count}건
+        other: 거래 %{count}건
+      select_account: 계좌로 가져오기
+      select_account_placeholder: 계좌 선택...
+      select_account_hint: 거래를 가져올 계좌를 선택하세요.
+      no_accounts: 사용 가능한 계좌가 없습니다. 먼저 계좌를 만드세요.
+      create_account: 계좌 만들기
+      save_account: 저장
+      publish_transactions:
+        one: 거래 %{count}건 게시
+        other: 거래 %{count}건 게시
+      review_transactions: 거래 검토
+      view_summary: 가져오기 요약 보기
+      already_recorded_note:
+        one: 이미 이 계좌에 있던 %{count}건을 명세서와 대조했습니다.
+        other: 이미 이 계좌에 있던 %{count}건을 명세서와 대조했습니다.
+      complete_fully_reconciled:
+        one: 명세서의 모든 거래가 이미 계좌에 있습니다. %{count}건을 대조하고 조정 완료로 표시했으므로 가져올 항목이 없습니다.
+        other: 명세서의 모든 거래가 이미 계좌에 있습니다. %{count}건 모두 대조하고 조정 완료로 표시했으므로 가져올 항목이 없습니다.
+      select_account_to_continue: 계속하려면 위에서 계좌를 선택하세요.
+      unknown_document_type: Unknown
