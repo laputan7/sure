@@ -41,7 +41,7 @@ module LanguagesHelper
     id: "Indonesian",
     it: "Italian",
     ja: "Japanese",
-    ko: "Korean",
+    ko: "한국어",
     lt: "Lithuanian",
     lv: "Latvian",
     'mi-NZ': "Maori (New Zealand)",
@@ -166,6 +166,7 @@ module LanguagesHelper
     "ca",   # Catalan
     "ro",   # Romanian
     "ru",   # Russian
+    "ko",   # Korean
     "pl",   # Polish
     "pt-PT", # Portuguese (Portugal)
     "pt-BR", # Brazilian Portuguese

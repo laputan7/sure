@@ -1,6 +1,11 @@
 require "test_helper"
 
 class LanguagesHelperTest < ActionView::TestCase
+  test "Korean is an available locale with its native display name" do
+    assert_includes LanguagesHelper::SUPPORTED_LOCALES, "ko"
+    assert_equal "한국어", LanguagesHelper::LANGUAGE_MAPPING[:ko]
+  end
+
   # The zone list is cached per process with the offsets current when it was
   # built. Another test may have built it under travel_to, when some zones had
   # a different standard offset, so rebuild it at the real time.
