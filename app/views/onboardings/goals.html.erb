@@ -23,6 +23,7 @@
       <%= form.hidden_field :redirect_to, value: self_hosted? ? "home" : "trial" %>
       <%= form.hidden_field :set_onboarding_goals_at, value: Time.current %>
       <%= form.hidden_field :onboarded_at, value: Time.current %>
+      <%= form.hidden_field :locale, value: @user.family.locale.presence || @user.locale || I18n.locale %>
 
       <div class="space-y-3">
         <% [

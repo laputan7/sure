@@ -33,6 +33,42 @@ class OnboardingsControllerTest < ActionDispatch::IntegrationTest
     assert_select "h1", text: /preferences/i
   end
 
+  test "selected onboarding locale persists to goals when browser prefers English" do
+    @user.update!(locale: "en")
+    english_browser = { "HTTP_ACCEPT_LANGUAGE" => "en-US,en;q=0.9" }
+
+    get preferences_onboarding_url, params: { locale: "ko" }, headers: english_browser
+
+    assert_response :success
+    assert_select "input[type='hidden'][name='user[locale]'][value='ko']"
+
+    patch user_url(@user), params: {
+      user: {
+        locale: "ko",
+        set_onboarding_preferences_at: Time.current,
+        redirect_to: "goals",
+        family_attributes: { id: @family.id, locale: "ko" }
+      }
+    }, headers: english_browser
+
+    assert_redirected_to goals_onboarding_url
+    follow_redirect!
+
+    assert_response :success
+    assert_select "h1", text: "어떤 목적으로 사용하시나요?"
+  end
+
+  test "saved onboarding locale overrides stale user and browser locales on goals" do
+    @user.update!(locale: "en", set_onboarding_preferences_at: Time.current)
+    @family.update!(locale: "ko")
+
+    get goals_onboarding_url, headers: { "HTTP_ACCEPT_LANGUAGE" => "en-US,en;q=0.9" }
+
+    assert_response :success
+    assert_select "h1", text: "어떤 목적으로 사용하시나요?"
+    assert_select "input[type='hidden'][name='user[locale]'][value='ko']"
+  end
+
   test "preferences page renders Series chart data without errors" do
     get preferences_onboarding_url
     assert_response :success
